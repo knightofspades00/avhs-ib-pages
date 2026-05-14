@@ -1,28 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 280" role="img" aria-label="Hawk soaring with wings spread">
-  <g fill="#0a1a3a">
+  <g fill="#0d0d0d">
     <!-- Body -->
     <ellipse cx="300" cy="155" rx="22" ry="55"/>
     <!-- Head -->
     <ellipse cx="300" cy="100" rx="19" ry="23"/>
     <!-- Beak -->
     <path d="M300 78 L316 73 L300 95 L284 73 Z"/>
-    <!-- Left wing (viewer's left) -->
+    <!-- Left wing -->
     <path d="M278 135 C238 125 175 128 105 140 C45 152 12 168 4 178 C30 178 67 175 105 173 C156 170 207 170 256 167 L278 160 Z"/>
-    <!-- Left wing primary feathers (separated) -->
+    <!-- Left wing primary feathers -->
     <path d="M8 172 L58 158 L65 168 L22 180 Z"/>
     <path d="M34 184 L80 167 L88 177 L48 190 Z"/>
     <path d="M62 192 L100 175 L108 185 L76 196 Z"/>
     <path d="M92 198 L125 182 L132 190 L102 200 Z"/>
-    <!-- Right wing (mirror) -->
+    <!-- Right wing -->
     <path d="M322 135 C362 125 425 128 495 140 C555 152 588 168 596 178 C570 178 533 175 495 173 C444 170 393 170 344 167 L322 160 Z"/>
     <!-- Right wing primaries -->
     <path d="M592 172 L542 158 L535 168 L578 180 Z"/>
     <path d="M566 184 L520 167 L512 177 L552 190 Z"/>
     <path d="M538 192 L500 175 L492 185 L524 196 Z"/>
     <path d="M508 198 L475 182 L468 190 L498 200 Z"/>
-    <!-- Tail (fanned) -->
+    <!-- Tail -->
     <path d="M283 200 L268 268 L285 263 L295 266 L300 260 L305 266 L315 263 L332 268 L317 200 Z"/>
   </g>
-  <!-- Gold eye -->
-  <circle cx="298" cy="98" r="3" fill="#fcb316"/>
+  <circle cx="298" cy="98" r="3" fill="#c5b358"/>
 </svg>

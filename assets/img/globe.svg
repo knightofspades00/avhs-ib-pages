@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Globe — Global Leadership Academy">
+  <!-- Sphere -->
+  <circle cx="50" cy="50" r="42" fill="#0d0d0d"/>
+  <!-- Subtle continent (Americas) -->
+  <path d="M33 26 Q27 36 29 50 Q32 64 38 72 L44 70 Q41 60 43 50 Q46 40 42 30 Q39 25 33 26 Z" fill="#c5b358" opacity="0.18"/>
+  <path d="M58 22 Q56 30 62 38 Q66 42 64 50 Q60 58 64 64 L70 62 Q72 54 68 48 Q72 38 68 28 Q64 22 58 22 Z" fill="#c5b358" opacity="0.14"/>
+  <!-- Latitude lines (horizontal ellipses) -->
+  <ellipse cx="50" cy="50" rx="42" ry="14" fill="none" stroke="#c5b358" stroke-width="0.7" opacity="0.55"/>
+  <ellipse cx="50" cy="50" rx="42" ry="28" fill="none" stroke="#c5b358" stroke-width="0.55" opacity="0.38"/>
+  <!-- Longitude lines (vertical ellipses) -->
+  <ellipse cx="50" cy="50" rx="14" ry="42" fill="none" stroke="#c5b358" stroke-width="0.7" opacity="0.55"/>
+  <ellipse cx="50" cy="50" rx="28" ry="42" fill="none" stroke="#c5b358" stroke-width="0.55" opacity="0.38"/>
+  <!-- Equator + prime meridian (slightly heavier) -->
+  <line x1="8" y1="50" x2="92" y2="50" stroke="#c5b358" stroke-width="1" opacity="0.85"/>
+  <line x1="50" y1="8" x2="50" y2="92" stroke="#c5b358" stroke-width="1" opacity="0.85"/>
+  <!-- Outer ring -->
+  <circle cx="50" cy="50" r="42" fill="none" stroke="#c5b358" stroke-width="1.8"/>
+</svg>

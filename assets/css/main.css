@@ -5,30 +5,41 @@
    ===================================================================== */
 
 :root {
-  /* Hawks palette */
-  --navy-950: #050d23;
-  --navy-900: #0a1a3a;
-  --navy-800: #0f2557;
-  --navy-700: #163280;
-  --navy-500: #2c4ba5;
-  --navy-300: #6783c9;
-  --navy-100: #e6ecf8;
+  /* Arroyo Valley palette — Black & Vegas Gold, blue accents */
+  /* "navy-*" variable names kept for compatibility; values are now charcoal/black */
+  --navy-950: #000000;
+  --navy-900: #0d0d0d;
+  --navy-800: #1a1a1a;
+  --navy-700: #262626;
+  --navy-500: #525252;
+  --navy-300: #a3a3a3;
+  --navy-100: #f0f0f0;
 
-  --gold-700: #b7820a;
-  --gold-600: #d4940a;
-  --gold-500: #fcb316;
-  --gold-400: #fdc94e;
-  --gold-100: #fff4d6;
+  /* Vegas Gold scale */
+  --gold-900: #5e5328;
+  --gold-700: #8a7a3a;
+  --gold-600: #a89148;
+  --gold-500: #c5b358; /* Vegas Gold */
+  --gold-400: #d4c578;
+  --gold-300: #e0d59a;
+  --gold-100: #f5efd0;
+
+  /* Blue accents — used sparingly */
+  --blue-900: #1e3a8a;
+  --blue-700: #1d4ed8;
+  --blue-500: #3b82f6;
+  --blue-300: #93c5fd;
+  --blue-100: #dbeafe;
 
   /* Neutrals */
   --paper: #ffffff;
-  --cream: #fefcf7;
-  --sand: #f6f1e6;
-  --rule: #e2e8f0;
-  --rule-soft: #eef2f7;
-  --ink: #111827;
-  --ink-soft: #4b5563;
-  --ink-mute: #6b7280;
+  --cream: #fafaf6;
+  --sand: #f4f1e4;
+  --rule: #e5e5e5;
+  --rule-soft: #f0f0f0;
+  --ink: #0f0f0f;
+  --ink-soft: #4a4a4a;
+  --ink-mute: #6b6b6b;
 
   /* Semantic */
   --ok: #15803d;
@@ -160,15 +171,61 @@ hr { border: none; border-top: 1px solid var(--rule); margin: 2.5em 0; }
   .nav-inner { flex-wrap: wrap; padding: .8em 1em; }
 }
 
-/* ---------- Top strip / language toggle ---------- */
+/* ---------- Top strip — IB credential + language ---------- */
 .topstrip {
-  background: var(--navy-950);
-  color: #cbd5e1;
-  font-size: .82rem;
-  padding: .3em 0;
-  text-align: center;
+  background: #000;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: .78rem;
+  padding: .55em 0;
+  border-bottom: 1px solid rgba(197, 179, 88, 0.18);
 }
-.topstrip a { color: var(--gold-400); }
+.topstrip-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 1.2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+.topstrip-credential {
+  display: inline-flex;
+  align-items: center;
+  gap: .65em;
+  letter-spacing: .04em;
+  color: rgba(255, 255, 255, 0.78);
+}
+.topstrip-credential .ib-mark {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--gold-400);
+  font-size: .95rem;
+  letter-spacing: .04em;
+  padding: .08em .42em .12em;
+  border: 1px solid rgba(197, 179, 88, 0.55);
+  border-radius: 3px;
+  line-height: 1;
+}
+.topstrip-credential .ib-mark sup { font-size: .55em; vertical-align: super; opacity: 0.7; }
+.topstrip-credential .credential-text {
+  color: rgba(255, 255, 255, 0.78);
+  text-transform: uppercase;
+  font-size: .72rem;
+  letter-spacing: .14em;
+  font-family: var(--font-display);
+  font-weight: 500;
+}
+.topstrip-credential .credential-text strong {
+  color: var(--gold-400);
+  font-weight: 600;
+}
+.topstrip a { color: var(--gold-400); text-decoration: none; }
+.topstrip a:hover { color: var(--gold-300); text-decoration: underline; }
+@media (max-width: 640px) {
+  .topstrip-inner { justify-content: center; }
+  .topstrip-credential .credential-text { font-size: .68rem; }
+}
 
 /* ---------- Hero ---------- */
 .hero {
@@ -649,21 +706,21 @@ main { display: block; }
 
 /* ---------- Updated nav: hawk crest tile ---------- */
 .nav-brand .crest-mark {
-  width: 42px;
-  height: 42px;
-  background: linear-gradient(135deg, var(--navy-700), var(--navy-900));
-  border: 2px solid var(--gold-500);
-  border-radius: 8px;
+  width: 44px;
+  height: 44px;
+  background: #000;
+  border: 1px solid var(--gold-500);
+  border-radius: 50%;
   display: grid;
   place-items: center;
   flex-shrink: 0;
   position: relative;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.35), inset 0 0 0 2px rgba(197,179,88,0.08);
   overflow: hidden;
 }
 .nav-brand .crest-mark img {
-  height: 30px;
-  width: auto;
+  width: 34px;
+  height: 34px;
   display: block;
 }
 .nav-brand-hawks {
@@ -673,14 +730,14 @@ main { display: block; }
   letter-spacing: .08em;
 }
 
-/* ---------- Hero · Hawks edition ---------- */
+/* ---------- Hero · Sophisticated edition ---------- */
 .hero-hawks {
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(circle at 78% 28%, rgba(252, 179, 22, 0.16) 0, transparent 45%),
-    radial-gradient(circle at 18% 88%, rgba(103, 131, 201, 0.20) 0, transparent 55%),
-    linear-gradient(135deg, var(--navy-950) 0%, var(--navy-900) 45%, var(--navy-800) 100%);
+    radial-gradient(ellipse at 78% 25%, rgba(197, 179, 88, 0.12) 0, transparent 50%),
+    radial-gradient(ellipse at 12% 85%, rgba(59, 130, 246, 0.06) 0, transparent 55%),
+    linear-gradient(160deg, #000 0%, #0d0d0d 50%, #1a1a1a 100%);
   color: #fff;
   padding: clamp(3.5rem, 9vw, 6rem) 1.2em clamp(7rem, 14vw, 11rem);
 }
@@ -746,17 +803,27 @@ main { display: block; }
   z-index: 1;
 }
 
-/* ---------- The Hawk Pride section ---------- */
+/* ---------- Hawk Pride section — sophisticated ---------- */
 .section-pride {
   position: relative;
   background:
-    radial-gradient(ellipse at top, rgba(252, 179, 22, 0.08) 0, transparent 60%),
-    linear-gradient(180deg, var(--gold-100) 0%, var(--sand) 100%);
-  border-top: 4px solid var(--gold-500);
-  border-bottom: 4px solid var(--gold-500);
-  padding: clamp(3.5rem, 8vw, 6rem) 1.2em;
+    radial-gradient(ellipse at top, rgba(197, 179, 88, 0.10) 0, transparent 65%),
+    linear-gradient(180deg, var(--cream) 0%, var(--sand) 100%);
+  border-top: 1px solid var(--gold-500);
+  border-bottom: 1px solid var(--gold-500);
+  padding: clamp(4rem, 8vw, 6rem) 1.2em;
   text-align: center;
 }
+.section-pride::before,
+.section-pride::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold-500), transparent);
+}
+.section-pride::before { top: 8px; }
+.section-pride::after { bottom: 8px; }
 .section-pride .container-narrow { max-width: 800px; }
 .section-pride h2 {
   font-family: var(--font-display);
@@ -779,25 +846,27 @@ main { display: block; }
 .section-pride .banner-cry {
   display: inline-flex;
   align-items: center;
-  gap: .8em;
+  gap: 1em;
   margin: 1.2em 0 0;
-  padding: .65em 1.6em;
-  background: var(--navy-900);
+  padding: .7em 1.8em;
+  background: #000;
   color: var(--gold-400);
   font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 1rem;
-  letter-spacing: .18em;
+  font-weight: 500;
+  font-size: .92rem;
+  letter-spacing: .25em;
   text-transform: uppercase;
-  border-radius: 4px;
-  border: 2px solid var(--gold-500);
-  box-shadow: 0 6px 24px rgba(10, 26, 58, 0.18);
+  border-radius: 2px;
+  border: 1px solid var(--gold-500);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
 }
 .section-pride .banner-cry::before,
 .section-pride .banner-cry::after {
-  content: "◆";
-  color: var(--gold-500);
-  font-size: .7em;
+  content: "";
+  display: inline-block;
+  width: 28px;
+  height: 1px;
+  background: var(--gold-500);
 }
 
 /* ---------- "We are" identity list ---------- */
@@ -938,18 +1007,15 @@ main { display: block; }
   text-transform: uppercase;
 }
 
-/* ---------- Chevron stripe accent (decorative band) ---------- */
+/* ---------- Thin gold accent rule ---------- */
 .chevron-band {
-  height: 14px;
-  background: repeating-linear-gradient(
-    -45deg,
-    var(--gold-500) 0,
-    var(--gold-500) 12px,
-    var(--gold-400) 12px,
-    var(--gold-400) 24px,
-    var(--navy-900) 24px,
-    var(--navy-900) 36px
-  );
+  height: 4px;
+  background: linear-gradient(90deg,
+    transparent 0,
+    var(--gold-500) 15%,
+    var(--gold-400) 50%,
+    var(--gold-500) 85%,
+    transparent 100%);
 }
 
 /* ---------- Page head: subtle hawk watermark ---------- */
