@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="6" fill="#0a1a3a"/>
+  <!-- Mini feather -->
+  <path fill="#fcb316" d="M16 5 Q7 14 9 22 Q11 27 14 28 L18 28 Q21 27 23 22 Q25 14 16 5 Z"/>
+  <line x1="16" y1="6" x2="16" y2="28" stroke="#0a1a3a" stroke-width="1.2" stroke-linecap="round"/>
+</svg>

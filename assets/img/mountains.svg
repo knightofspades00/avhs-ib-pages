@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200" preserveAspectRatio="none" aria-hidden="true">
+  <!-- Far range -->
+  <path fill="#050d23" opacity="0.85" d="M0 200 L0 115 L70 75 L150 100 L235 55 L320 95 L410 65 L515 105 L600 70 L700 100 L800 60 L905 95 L1015 70 L1115 105 L1200 75 L1200 200 Z"/>
+  <!-- Near range -->
+  <path fill="#0a1a3a" d="M0 200 L0 155 L90 125 L180 150 L265 110 L365 145 L445 115 L545 155 L645 125 L745 150 L845 120 L955 150 L1050 125 L1155 150 L1200 135 L1200 200 Z"/>
+</svg>

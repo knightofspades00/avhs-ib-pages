@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 200" role="img" aria-label="Hawk feather">
+  <defs>
+    <linearGradient id="vane" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#163280"/>
+      <stop offset="55%" stop-color="#0f2557"/>
+      <stop offset="100%" stop-color="#050d23"/>
+    </linearGradient>
+  </defs>
+  <!-- Outer vane (navy gradient) -->
+  <path fill="url(#vane)" d="M30 7 Q6 50 11 130 Q16 175 27 195 L33 195 Q44 175 49 130 Q54 50 30 7 Z"/>
+  <!-- Subtle barb lines -->
+  <g stroke="#fdc94e" stroke-width="0.7" stroke-linecap="round" opacity="0.45">
+    <path d="M30 40 L14 55"/><path d="M30 40 L46 55"/>
+    <path d="M30 55 L11 75"/><path d="M30 55 L49 75"/>
+    <path d="M30 70 L9 95"/><path d="M30 70 L51 95"/>
+    <path d="M30 85 L10 115"/><path d="M30 85 L50 115"/>
+    <path d="M30 100 L12 130"/><path d="M30 100 L48 130"/>
+    <path d="M30 115 L15 145"/><path d="M30 115 L45 145"/>
+    <path d="M30 130 L18 160"/><path d="M30 130 L42 160"/>
+    <path d="M30 145 L23 175"/><path d="M30 145 L37 175"/>
+  </g>
+  <!-- Center shaft / quill (gold) -->
+  <line x1="30" y1="9" x2="30" y2="194" stroke="#fcb316" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Tip dot -->
+  <circle cx="30" cy="8" r="2.5" fill="#fcb316"/>
+</svg>
