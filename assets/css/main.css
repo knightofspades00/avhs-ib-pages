@@ -530,6 +530,40 @@ main { display: block; }
   font-family: var(--font-sans);
 }
 
+/* ---------- Footer motto strip ---------- */
+.footer-motto {
+  max-width: var(--container);
+  margin: 2.5em auto 0;
+  padding: 1.6em 1.2em 0;
+  border-top: 1px solid rgba(197, 179, 88, 0.22);
+  text-align: center;
+}
+.footer-motto .motto-values {
+  display: block;
+  font-family: var(--font-display);
+  font-size: .78rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--gold-400);
+  margin-bottom: .55em;
+  opacity: 0.85;
+}
+.footer-motto .motto-cry {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #fff;
+}
+.footer-motto .motto-cry .star {
+  color: var(--gold-500);
+  font-size: 0.85em;
+  margin: 0 .6em;
+  vertical-align: .08em;
+}
+
 /* ---------- Footer ---------- */
 .footer {
   background: var(--navy-950); color: #cbd5e1;
@@ -785,10 +819,21 @@ main { display: block; }
   font-size: clamp(1.1rem, 2.3vw, 1.4rem);
   line-height: 1.45;
   color: rgba(255, 255, 255, 0.92);
-  max-width: 32ch;
-  margin: 0 0 1.8em;
+  max-width: 36ch;
+  margin: 0 0 1.4em;
   font-style: italic;
   font-weight: 400;
+}
+.hero-hawks .hero-values {
+  font-family: var(--font-display);
+  font-size: clamp(.78rem, 1.4vw, .92rem);
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold-400);
+  margin: 0 0 2em;
+  max-width: none;
+  opacity: 0.9;
 }
 .hero-hawks .hero-actions { margin-top: 1.4em; }
 
@@ -869,7 +914,7 @@ main { display: block; }
   background: var(--gold-500);
 }
 
-/* ---------- "We are" identity list ---------- */
+/* ---------- "We are" identity list (legacy) ---------- */
 .pride-list {
   list-style: none;
   padding: 0;
@@ -902,6 +947,64 @@ main { display: block; }
   display: block;
   font-size: 0.92rem;
   margin-bottom: 0.15em;
+}
+
+/* ---------- HAWK values acronym grid ---------- */
+.hawk-values {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.4em;
+  margin: 2.5em 0;
+  text-align: center;
+  position: relative;
+}
+.hawk-values::before {
+  content: "";
+  position: absolute;
+  left: 12%; right: 12%;
+  top: 1em;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-500) 20%, var(--gold-500) 80%, transparent);
+  opacity: 0.35;
+  z-index: 0;
+}
+.hawk-value {
+  position: relative;
+  z-index: 1;
+  padding: 0 .5em;
+}
+.hawk-letter {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(3.5rem, 10vw, 6.5rem);
+  color: var(--gold-500);
+  line-height: 1;
+  margin: 0 0 .15em;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 0 rgba(197, 179, 88, 0.15);
+}
+.hawk-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--navy-900);
+  font-size: clamp(.85rem, 1.4vw, 1rem);
+  margin: 0 0 .6em;
+}
+.hawk-desc {
+  font-family: var(--font-serif);
+  color: var(--ink-soft);
+  font-size: clamp(.85rem, 1.4vw, .95rem);
+  line-height: 1.45;
+  margin: 0;
+}
+@media (max-width: 720px) {
+  .hawk-values {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em 1em;
+  }
+  .hawk-values::before { display: none; }
 }
 
 /* ---------- Feather divider (between sections) ---------- */
