@@ -93,7 +93,7 @@ Then on github.com:
 3. Branch: **main** / folder: **`/ (root)`**.
 4. Save. Site will publish at `https://knightofspades00.github.io/avhs-ib-pages/` in ~1 minute.
 
-For a custom domain (e.g. `ib.avhshawks.com` or similar):
+For a custom domain (e.g. `ib.avhshawkathletics.com` or similar):
 1. Add a `CNAME` file at the project root with just the domain on one line.
 2. Configure DNS at your registrar — CNAME record from the subdomain to `knightofspades00.github.io`.
 3. Wait for DNS propagation and HTTPS provisioning (5 min – 24 hrs).
