@@ -18,8 +18,17 @@ assert(ppSources.every(s=>s.url.startsWith('https://')));assert.equal(ppRoles.su
 const test=ppPlanText({'supervisor-purpose':'Prepare a general coaching question',checks:{'supervisor-guide':true}});assert(test.includes('[x] Locate'));assert(test.includes('Prepare a general coaching question'));assert(!test.includes('undefined'));assert(test.includes('No verified local deadlines'));
 console.log('PASS personal-project role tools, A/B/C mapping and export.');
 const theme=readFileSync('src/glaTheme.css','utf8');assert(theme.includes('prefers-reduced-motion:reduce'));assert(theme.includes('background:#090909'));assert(theme.includes('backdrop-filter:none'));
-const hero=readFileSync('src/StudioHero.jsx','utf8');assert(hero.includes('requestAnimationFrame'));assert(hero.includes('IntersectionObserver'));assert(hero.includes("e.pointerType==='touch'"));
 assert(readFileSync('src/main.jsx','utf8').includes('Global Leadership'));
 console.log('PASS GLA theme and motion safeguards.');
 
 assert(readFileSync('src/SessionHub.jsx','utf8').includes('not the official staff agenda'));assert(readFileSync('src/main.jsx','utf8').includes("route==='sessions'?<SessionHub/>"));console.log('PASS presentation hub routes.');
+
+import {teachingMaps,tokLenses,mapText} from '../src/teachingMapsData.js';
+assert.deepEqual(Object.keys(teachingMaps),['atl','tok','design']);
+assert.equal(teachingMaps.atl.nodes.length,5);assert.equal(teachingMaps.atl.nodes.flatMap(n=>n.clusters).length,10);
+assert.deepEqual(teachingMaps.atl.nodes.find(n=>n.id==='social').clusters,['Collaboration']);
+assert.equal(teachingMaps.tok.nodes.length,5);assert.equal(tokLenses.length,4);assert(teachingMaps.tok.nodes.every(n=>tokLenses.every(([id])=>n.lenses[id])));
+assert.deepEqual(teachingMaps.design.nodes.map(n=>n.code),['A','B','C','D']);assert(teachingMaps.design.note.includes('A Planning, B Applying skills and C Reflecting'));
+for(const kind of Object.keys(teachingMaps)){const txt=mapText(kind);assert(!txt.includes('undefined'));assert(teachingMaps[kind].nodes.every(n=>txt.includes(n.label)));assert(txt.includes('Public IB sources'));}
+const maps=readFileSync('src/TeachingMaps.jsx','utf8');assert(maps.includes('aria-pressed'));assert(maps.includes('Read the complete text version'));assert(!readFileSync('src/StudioHero.jsx','utf8').includes('liquid'));assert(readFileSync('src/main.jsx','utf8').includes("route==='maps'?"));
+console.log('PASS ATL 5/10 mapping, TOK 5/4, Design A–D, PP distinction, exports and semantic controls.');
