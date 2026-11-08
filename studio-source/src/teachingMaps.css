@@ -9,3 +9,5 @@
 @media print{.framework-map,.map-switch,.map-lenses,.map-actions,.map-teaching-panel,.teaching-map-heading>.quiet-link{display:none}.map-text>div{display:block}.map-text:not([open])>div{display:block}.teaching-maps,.map-text{background:white;color:black;border-color:#777;box-shadow:none}.teaching-maps p,.teaching-maps h1,.teaching-maps h2,.teaching-maps h3,.teaching-maps li,.teaching-maps a{color:black}.map-description,.map-boundary p{font-size:12px}}
 
 .teaching-maps .teaching-map-heading{text-transform:none;letter-spacing:normal;color:var(--ink)}.teaching-maps .teaching-map-heading h1,.teaching-maps .teaching-map-heading h2{color:#eee3c5}.teaching-maps .teaching-map-heading p:not(.eyebrow){color:#b9b4a9;letter-spacing:normal}.map-node-top{white-space:nowrap}
+
+.map-lesson-link{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:14px 16px;margin:19px 0;border:1px solid #9ab9d944;border-radius:8px;background:linear-gradient(110deg,#1c2a3c,#121821);color:#c2d6ee;text-decoration:none;font-size:12px}.map-lesson-link:focus-visible{outline:2px solid #99c0e8;outline-offset:4px}

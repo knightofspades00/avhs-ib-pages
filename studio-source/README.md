@@ -24,7 +24,7 @@ Calm view and reduced-motion styling disable animation. Short transitions use op
 
 Original React diagrams for MYP ATL (five categories, ten clusters), TOK (five areas of knowledge and four shared lenses, with pairwise comparisons), and the iterative MYP Design cycle. These are teaching aids, not official graphics or assessment rubrics. MYP Design A–D is explicitly distinguished from Personal Project A–C. Complete text alternatives and downloadable teaching guides contain the same original prompts. Official public sources are linked; the older ATL mapping source is labeled.
 
-The home page prioritizes the November 9–10 sessions, followed by teaching diagrams and a concise resource index. Sidebar groups separate facilitation, planning and reading. No additional hosting or audience changes are included.
+Home provides a concise route to dated PD/PLC sessions, classroom examples and the research library. Sidebar groups separate facilitation, planning, programme support and reading. No additional hosting or audience changes are included.
 
 ## Tactile interactions
 
@@ -49,3 +49,7 @@ The November 9 academy outline uses the verified breakout window and recommended
 Home is a concise landing page. Dated PD/PLC pages contain the meeting outline, relevant activities, supporting tools and verified attendance destination where applicable. The legacy `#sessions` link opens the meeting hub; workshop and recruitment return links go to their own November 10 / November 9 session. No programme-updates feed has been invented.
 
 The Tuesday day outline is confirmed, while the six-activity workshop remains proposed and estimated at about 60 minutes. Technology and support are separately labeled optional extensions, not an afternoon assignment. The activity timer pauses when leaving its view. Drafts remain in tab memory and downloads are local text files, not submissions or account saves. Research-list notices appear before interaction, and personal-project notes have a direct keyboard-accessible jump link.
+
+## Daily teaching, projects and support
+
+Fourteen original, framework-informed MYP/DP lesson examples connect the ATL and TOK maps to editable 50-minute agendas, further questions and project extensions. CTE/PBL planning includes an adaptable milestone sequence and text export. Student supports uses invented counts only, with observed/missing denominators and interpretation feedback, scaffold/enrichment examples and general planning notes. None of these examples is an evaluated intervention, an official IB lesson, or a student record. All notes remain in tab memory and exports are local files, not school-account saves.
