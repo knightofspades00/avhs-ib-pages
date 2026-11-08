@@ -35,3 +35,11 @@ Selected diagram nodes have visible depth and connected highlighting. Session li
 The calendar contains 42 checked public-source records: 28 IB submission/exam entries and 14 district-calendar entries. Exact local cutoffs, candidate/course applicability and school hand-in dates require confirmation. Theatre production-proposal timing remains an explicitly unresolved note, excluded from dated downloads. The final IB examination PDF is a public school-hosted copy and is labeled accordingly.
 
 AI + IB separates May 2026 official integrity guidance from original teacher prompts and unconfirmed local tool approval. Prompt selection, copy and text download do not call an AI service. Protected IB content and student information are excluded. No form, backend, authentication, account-save or Classroom-sync integration has been added.
+
+## PD and PLC meeting archive
+
+Eight dated entries distinguish Academy MOU, IB PLC and PD; July is month-only because an exact day is unverified. Historical resources remain public-safe summaries. The reusable agenda is an original working adaptation of the SBCUSD PLC feedback rubric and established AVHS agendas, not an official district template. Nine district values link to the public district source. Norms, rotating roles, five PLC focus areas, and follow-through fields are included.
+
+Two specific Google Forms respondent URLs are intentionally allowed: Academy MOU sign-in and IB PLC sign-in. Both were verified as blank participant forms under a school account on November 8, 2026. External or anonymous form access was not tested and is not promised. No response was submitted. No attendance sheet, response view or source-document URL is included. The site remains public; Google controls each form's access separately.
+
+The November 9 academy outline uses the verified breakout window and recommended allocation; November 10's detailed workshop sequence remains labeled proposed within the confirmed full pull-out day.
