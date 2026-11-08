@@ -1,0 +1,13 @@
+import React,{useEffect,useRef} from 'react';
+
+// Pointer-only enhancement. No rendering loop, no tracking, no new state storage.
+// All actions remain regular links/buttons; touch and keyboard need no tilt gesture.
+export function useTactileSurface(maxTilt=2){
+ const ref=useRef(null),frame=useRef(0),bounds=useRef(null),allowed=useRef(false),point=useRef({x:.5,y:.5});
+ function reset(){cancelAnimationFrame(frame.current);frame.current=0;bounds.current=null;const el=ref.current;if(!el)return;el.style.setProperty('--depth-x','0deg');el.style.setProperty('--depth-y','0deg');el.style.setProperty('--light-x','50%');el.style.setProperty('--light-y','30%');el.removeAttribute('data-depth-active')}
+ useEffect(()=>{const fine=matchMedia('(hover: hover) and (pointer: fine)'),reduce=matchMedia('(prefers-reduced-motion: reduce)');const sync=()=>{allowed.current=fine.matches&&!reduce.matches&&document.documentElement.dataset.motion!=='off'&&!document.hidden;if(!allowed.current)reset()};sync();fine.addEventListener('change',sync);reduce.addEventListener('change',sync);document.addEventListener('visibilitychange',sync);window.addEventListener('resize',reset);const observer=new MutationObserver(sync);observer.observe(document.documentElement,{attributes:true,attributeFilter:['data-motion']});return()=>{cancelAnimationFrame(frame.current);fine.removeEventListener('change',sync);reduce.removeEventListener('change',sync);document.removeEventListener('visibilitychange',sync);window.removeEventListener('resize',reset);observer.disconnect()}},[]);
+ function enter(e){if(!allowed.current||e.pointerType!=='mouse')return;bounds.current=e.currentTarget.getBoundingClientRect()}
+ function move(e){if(!allowed.current||e.pointerType!=='mouse'||!bounds.current)return;const b=bounds.current;point.current={x:Math.max(0,Math.min(1,(e.clientX-b.left)/b.width)),y:Math.max(0,Math.min(1,(e.clientY-b.top)/b.height))};if(frame.current)return;frame.current=requestAnimationFrame(()=>{const el=ref.current;if(el&&allowed.current){const{x,y}=point.current;el.style.setProperty('--depth-x',`${(.5-y)*maxTilt}deg`);el.style.setProperty('--depth-y',`${(x-.5)*maxTilt}deg`);el.style.setProperty('--light-x',`${x*100}%`);el.style.setProperty('--light-y',`${y*100}%`);el.dataset.depthActive='true'}frame.current=0})}
+ return {ref,onPointerEnter:enter,onPointerMove:move,onPointerLeave:reset,onPointerCancel:reset};
+}
+export default function TactileSurface({as:Tag='div',className='',children,...props}){const depth=useTactileSurface(3);return <Tag {...props} {...depth} className={`tactile-surface ${className}`}>{children}</Tag>}

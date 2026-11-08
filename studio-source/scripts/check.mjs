@@ -32,3 +32,13 @@ assert.deepEqual(teachingMaps.design.nodes.map(n=>n.code),['A','B','C','D']);ass
 for(const kind of Object.keys(teachingMaps)){const txt=mapText(kind);assert(!txt.includes('undefined'));assert(teachingMaps[kind].nodes.every(n=>txt.includes(n.label)));assert(txt.includes('Public IB sources'));}
 const maps=readFileSync('src/TeachingMaps.jsx','utf8');assert(maps.includes('aria-pressed'));assert(maps.includes('Read the complete text version'));assert(!readFileSync('src/StudioHero.jsx','utf8').includes('liquid'));assert(readFileSync('src/main.jsx','utf8').includes("route==='maps'?"));
 console.log('PASS ATL 5/10 mapping, TOK 5/4, Design A–D, PP distinction, exports and semantic controls.');
+
+const tactile=readFileSync('src/TactileSurface.jsx','utf8'),depthStyle=readFileSync('src/tactile.css','utf8');
+assert(tactile.includes('requestAnimationFrame'));assert(tactile.includes('cancelAnimationFrame'));assert(tactile.includes("e.pointerType!=='mouse'"));assert(tactile.includes('prefers-reduced-motion'));assert(tactile.includes("attributeFilter:['data-motion']"));assert(depthStyle.includes('translateZ(26px)'));assert(depthStyle.includes('@media(hover:none)'));assert(depthStyle.includes('html[data-motion=off]'));
+console.log('PASS tactile depth, pointer gating, frame cancellation and reduced-motion controls.');
+
+import {calendarEntries,calendarNotes,calendarReferences,filterCalendar,calendarText} from '../src/ibCalendarData.js';
+assert.equal(calendarEntries.length,42);assert.equal(new Set(calendarEntries.map(r=>r.id)).size,42);assert(calendarEntries.every(r=>r.url.startsWith('https://')&&/^202[67]-\d\d-\d\d$/.test(r.date)));assert.equal(filterCalendar(calendarEntries,{programme:'MYP'}).length,1);assert.equal(filterCalendar(calendarEntries,{programme:'Schoolwide'}).length,14);assert.equal(filterCalendar(calendarEntries,{programme:'IB'}).length,28);assert.equal(filterCalendar(calendarEntries,{programme:'DP',search:'Extended essay'})[0].date,'2027-03-15');assert.equal(calendarNotes.length,2);assert.equal(calendarReferences.length,9);assert(!calendarText(calendarEntries).includes('undefined'));
+import {aiSources,aiTeacherMoves,teacherPrompt} from '../src/aiAndIBData.js';
+assert.equal(aiTeacherMoves.length,4);assert(aiTeacherMoves.every(m=>teacherPrompt(m,'DP').includes('Diploma Programme')&&teacherPrompt(m).includes('Do not upload IB copyrighted materials')));assert(aiSources.policy.includes('ibo.org'));assert(readFileSync('src/AIAndIB.jsx','utf8').includes('Citation')===false);assert(readFileSync('src/AIAndIB.jsx','utf8').includes('A citation does not make'));
+console.log('PASS 42 public calendar records, date filters/exports and safe teacher prompts.');

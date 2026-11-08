@@ -14,7 +14,7 @@ Original criterion-aligned summaries and coaching tools, not a marking rubric or
 
 ## Privacy and access
 
-Planning inputs remain in browser-tab memory, survive internal navigation, and clear on reload or close. Download or print to retain them. No app analytics, external fonts, student-data integration, browser storage, or app network requests. External sites have separate access, account, and privacy terms. Do not enter student or confidential information.
+Planning inputs remain in browser-tab memory, survive internal navigation, and clear on reload or close. Download or print to retain them. No app analytics, external fonts, student-data integration, browser storage, or data-submission/API requests. Static assets load from the site; the research library is loaded on demand. External sites have separate access, account, and privacy terms. Do not enter student or confidential information.
 
 ## Interaction and accessibility
 
@@ -25,3 +25,13 @@ Calm view and reduced-motion styling disable animation. Short transitions use op
 Original React diagrams for MYP ATL (five categories, ten clusters), TOK (five areas of knowledge and four shared lenses, with pairwise comparisons), and the iterative MYP Design cycle. These are teaching aids, not official graphics or assessment rubrics. MYP Design A–D is explicitly distinguished from Personal Project A–C. Complete text alternatives and downloadable teaching guides contain the same original prompts. Official public sources are linked; the older ATL mapping source is labeled.
 
 The home page prioritizes the November 9–10 sessions, followed by teaching diagrams and a concise resource index. Sidebar groups separate facilitation, planning and reading. No additional hosting or audience changes are included.
+
+## Tactile interactions
+
+Selected diagram nodes have visible depth and connected highlighting. Session links, framework controls and planning panels use restrained material surfaces. Pointer tilt is a React enhancement for mouse/fine-pointer input only, limited to one pending animation frame and a small angle. It stops on exit, cancellation, tab hiding, Calm view or reduced-motion preference. Touch and keyboard retain complete controls without tilt. No idle animation is introduced.
+
+## Public dates and AI + IB
+
+The calendar contains 42 checked public-source records: 28 IB submission/exam entries and 14 district-calendar entries. Exact local cutoffs, candidate/course applicability and school hand-in dates require confirmation. Theatre production-proposal timing remains an explicitly unresolved note, excluded from dated downloads. The final IB examination PDF is a public school-hosted copy and is labeled accordingly.
+
+AI + IB separates May 2026 official integrity guidance from original teacher prompts and unconfirmed local tool approval. Prompt selection, copy and text download do not call an AI service. Protected IB content and student information are excluded. No form, backend, authentication, account-save or Classroom-sync integration has been added.
