@@ -1,4 +1,4 @@
-import React,{useRef,useState} from 'react';
+import React,{useDeferredValue,useRef,useState} from 'react';
 import {ArrowUpRight,ArrowRight,Search,BookOpen,FlaskConical,Info,Download,Check,ShieldCheck,ChevronDown,Target,Bookmark,SlidersHorizontal,Users,BarChart3} from 'lucide-react';
 import {researchBriefs,trialFields} from './researchData.js';
 import {filterResearch,readingListText} from './researchUtils.js';
@@ -10,7 +10,8 @@ export default function Research({notes,setNotes}){
  const savedIds=notes.readingIds||[];
  const categories=[...new Set(researchBriefs.map(r=>r.category))];
  const subjects=[...new Set(researchBriefs.flatMap(r=>r.subjects||[]))].sort();
- const found=filterResearch(researchBriefs,{sourceType,topic,subject,search,onlySaved,savedIds});
+ const deferredSearch=useDeferredValue(search);
+ const found=filterResearch(researchBriefs,{sourceType,topic,subject,search:deferredSearch,onlySaved,savedIds});
  const resultLabel=sourceType==='peer'?(found.length===1?'peer-reviewed article':'peer-reviewed articles'):sourceType==='guidance'?(found.length===1?'guide or report':'guides and reports'):(found.length===1?'source':'sources');
  const visible=found.slice(0,limit);const chosen=researchBriefs.find(r=>r.id===notes.sourceId);
  const peerCount=researchBriefs.filter(r=>r.peerReviewed).length;const guideCount=researchBriefs.length-peerCount;
