@@ -115,3 +115,17 @@ For a custom domain (e.g. `ib.avhshawkathletics.com` or similar):
 Content authored for AVHS use. The **IB**, **International Baccalaureate**, **IB World School**, **MYP**, and **DP** trademarks are property of the International Baccalaureate Organization. This site is an unofficial student/family resource and should not be construed as official IB communication.
 
 — *Maintained by the AVHS IB office.*
+
+## IB Learning Studio
+
+The public Learning Studio is available at [studio/](https://knightofspades00.github.io/avhs-ib-pages/studio/).
+The existing family information site above remains at the repository root.
+
+- `studio/` contains the ready-to-serve, no-login static build.
+- `studio-source/` contains its sanitized React/Vite source for continued development.
+- To rebuild: run `npm ci`, `npm run check`, and `npm run build` from `studio-source/`, then copy its `dist/` contents into `studio/` and commit the source and built assets together.
+- Keep the Vite relative base (`./`) so assets work under the GitHub Pages project path.
+- No student records, school-only documents, private links, credentials, or source maps belong in this public repository.
+- Planning notes stay only in the visitor's current browser tab. Download notes before reloading. External research and product sites may have their own access requirements.
+
+GitHub Pages continues to deploy from the existing `main` branch root. No extra workflow or credentials are required.
