@@ -43,3 +43,9 @@ Eight dated entries distinguish Academy MOU, IB PLC and PD; July is month-only b
 Two specific Google Forms respondent URLs are intentionally allowed: Academy MOU sign-in and IB PLC sign-in. Both were verified as blank participant forms under a school account on November 8, 2026. External or anonymous form access was not tested and is not promised. No response was submitted. No attendance sheet, response view or source-document URL is included. The site remains public; Google controls each form's access separately.
 
 The November 9 academy outline uses the verified breakout window and recommended allocation; November 10's detailed workshop sequence remains labeled proposed within the confirmed full pull-out day.
+
+## Navigation and session clarity
+
+Home is a concise landing page. Dated PD/PLC pages contain the meeting outline, relevant activities, supporting tools and verified attendance destination where applicable. The legacy `#sessions` link opens the meeting hub; workshop and recruitment return links go to their own November 10 / November 9 session. No programme-updates feed has been invented.
+
+The Tuesday day outline is confirmed, while the six-activity workshop remains proposed and estimated at about 60 minutes. Technology and support are separately labeled optional extensions, not an afternoon assignment. The activity timer pauses when leaving its view. Drafts remain in tab memory and downloads are local text files, not submissions or account saves. Research-list notices appear before interaction, and personal-project notes have a direct keyboard-accessible jump link.
