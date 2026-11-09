@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {allChecklistRecords,submissionDeadlines,programmeRequirements,subjectRequirements,unresolvedChecks,checklistSources,checklistItems,filterChecklistRecords,clearChecklistTicks,checklistSummary} from '../src/submissionChecklistsData.js';
+assert.equal(submissionDeadlines.length,5);assert.equal(programmeRequirements.length,8);assert.equal(subjectRequirements.length,12);assert.equal(unresolvedChecks.length,5);assert.equal(allChecklistRecords.length,30);
+assert(submissionDeadlines.every(x=>x.dateEvidence==='public'&&['2027-03-15','2027-04-20','2027-04-30'].includes(x.date)));assert(submissionDeadlines.every(x=>x.studentDueDate===null));
+const ee=submissionDeadlines.find(x=>x.id==='early-written');assert.equal(ee.title,'Extended essay upload');assert.deepEqual(ee.sourceIds,['eeDate','ee']);assert.equal(ee.deliverables.length,2);
+for(const x of allChecklistRecords){assert(x.id&&x.role&&x.programme);assert(checklistItems(x).length>0);for(const id of x.sourceIds||[])assert(checklistSources[id]);}
+for(const s of Object.values(checklistSources)){assert(new URL(s.url).hostname.endsWith('ibo.org'));assert(s.authority.startsWith('Official IB public source'));}
+assert.equal(filterChecklistRecords({view:'dates',programme:'MYP'}).length,1);assert.equal(filterChecklistRecords({view:'dates',month:'2027-03'}).length,2);assert.equal(filterChecklistRecords({view:'dates',month:'2027-04'}).length,3);assert.equal(filterChecklistRecords({view:'requirements'}).length,25);assert.equal(filterChecklistRecords({view:'requirements',query:'public-coverage'}).length,1);
+for(const r of submissionDeadlines)assert.equal(filterChecklistRecords({selected:r.id}).length,1);
+const k=checklistItems(submissionDeadlines[0])[0].key;const notes={[k]:true,keep:true};assert.deepEqual(clearChecklistTicks(notes,[submissionDeadlines[0]]),{keep:true});const txt=checklistSummary(allChecklistRecords,notes);assert(txt.includes('[x]'));assert(!txt.includes('undefined'));assert(txt.includes('not submitted'));
+const data=readFileSync('src/submissionChecklistsData.js','utf8');assert(!/snapshot|coordinator-held|IBIS|existingLocalGuidance|monthlyExpectations|proposedLocalTargets/i.test(data));const ui=readFileSync('src/SubmissionChecklists.jsx','utf8');assert(ui.includes('Public sources'));assert(ui.includes('Back to all dates'));assert(ui.includes('role="tab"'));assert(!/localStorage|sessionStorage|fetch\(|XMLHttpRequest|sendBeacon/.test(ui));
+console.log('PASS five independently public date groups, 25 public requirements/confirmation items, sources, filters, ticks, exports and removal of nonpublic-derived content.');

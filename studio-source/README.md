@@ -53,3 +53,9 @@ The Tuesday day outline is confirmed, while the six-activity workshop remains pr
 ## Daily teaching, projects and support
 
 Fourteen original, framework-informed MYP/DP lesson examples connect the ATL and TOK maps to editable 50-minute agendas, further questions and project extensions. CTE/PBL planning includes an adaptable milestone sequence and text export. Student supports uses invented counts only, with observed/missing denominators and interpretation feedback, scaffold/enrichment examples and general planning notes. None of these examples is an evaluated intervention, an official IB lesson, or a student record. All notes remain in tab memory and exports are local files, not school-account saves.
+
+## Public-source submission preparation and reusable forms
+
+The checklist includes five grouped submission tasks supported by official public IB 2027 examiner instructions: extended essay, early arts components, Music/Visual arts IA components, MYP uploads and later arts coursework. Eight programme/core summaries, twelve subject checks and five school-confirmation items link to public guidance. This is not the full session calendar, school policy or a student-deadline list. Other dates, local expectation sheets and monthly planning must be obtained from the programme team.
+
+Review ticks stay in tab memory and exports are personal review copies, not completion or submission records. Three blank fillable PDF templates cover daily lessons, MYP units and PD/PLC agendas. Download, edit in a compatible reader, save and reopen to verify entries. No PDF sends data back to the site.
