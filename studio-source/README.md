@@ -6,7 +6,7 @@ Public teacher-learning edition, built with React 19 and Vite 6. Run `npm ci`, `
 
 Dated PD/PLC sessions and direct activity launchers, subject pathways, DP core, MYP planning and ATL, research reading room, curated teaching summaries, recruitment workspace, and personal-project supervisor/lead-teacher preparation.
 
-Black and Vegas gold form the studio palette, with blue accents. The school/academy text hierarchy is grounded in the official school page; this is a design interpretation, not an official color specification. No school logo assets are copied.
+Black and Vegas gold form the studio palette, with blue accents. The school/academy text hierarchy is grounded in the official school page; this is a design interpretation, not an official color specification. The academy-provided GLA seal is used in the existing navigation and Home heading.
 
 ## Personal project
 
@@ -75,3 +75,7 @@ The November 9 timed agenda has selectable blocks, previous/next controls, a foc
 Academy Business distinguishes staff requests from the student registration-check form. The latter still displays October 30; a visible warning directs current corrections and deadlines to the coordinator. Extra-duty payroll-period endpoints are omitted because sources conflict. The software discussion is a neutral prompt to review resources and agree on next steps.
 
 The updated Monday working outline keeps the first 30 minutes, the 8:40 recruitment activity and 8:55 close. MYP, DP and AniVation are explicitly combined with staff forms at 8:47–8:52; software review follows at 8:52–8:55. This is the requested working agenda, not a newly issued schoolwide schedule.
+
+## Academy identity and teaching connections
+
+The provided GLA seal retains its original colors and artwork. An original React wireframe globe responds to three teaching-lens buttons on Home, revealing a classroom prompt and a direct link to the existing ATL, TOK or MYP Design diagram. It is a visual connection motif, not a geographic data display. No automatic rotation, new external requests, persistence or new programme requirements. Keyboard and touch use the same buttons; Calm view and reduced-motion settings remove transitions. The existing layout, palette, meeting content and tools are preserved.

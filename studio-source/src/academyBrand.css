@@ -1,0 +1,25 @@
+/* Academy identity stays within the existing black / Vegas gold / blue palette. */
+.sidebar .studio-brand{align-items:center;gap:9px}
+.academy-logo{display:block;width:44px;height:44px;object-fit:contain;flex:none}
+.academy-home-logo{display:block;width:108px;height:108px;object-fit:contain;flex:none;margin-left:auto}
+.home-concise{display:flex;align-items:center;gap:28px}.home-concise>div{min-width:0}
+.globe-connections-heading{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.home-frameworks .globe-connections-heading h2{margin:15px 0;font:24px/1.25 Georgia,serif}
+.connection-globe{display:block;width:112px;height:112px;flex:none;overflow:visible}
+.globe-meridians{transform-origin:80px 80px;transition:transform 380ms ease}
+.globe-connections .globe-lenses{display:flex;gap:7px;margin:10px 0 19px}
+.content[data-page] .globe-lenses button{flex:1;min-height:44px;padding:9px 7px;border:1px solid #c5b35842;border-radius:4px;background:transparent;color:#c9c0a9;font-family:inherit;font-size:13px;font-weight:500;line-height:1.3;cursor:pointer;transition:background 150ms ease,border-color 150ms ease}
+.globe-lenses button:hover{background:#c5b35812;border-color:#c5b358}
+.globe-lenses button[aria-pressed=true]{background:#c5b35818;border-color:#c5b358;color:#f0dc9b;box-shadow:inset 0 -2px #c5b358}
+.globe-lenses button:focus-visible,.globe-prompt a:focus-visible{outline:2px solid #accbea;outline-offset:4px}
+.content[data-page] .globe-prompt-label{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#c5b358;margin:0 0 10px}
+.content[data-page] .globe-question{font:23px/1.35 Georgia,serif;color:#eadfc1;margin:0 0 12px}
+.content[data-page] .globe-practice{font-size:13px;line-height:1.75;color:#beb49e;margin:0 0 16px;min-height:90px}
+.globe-prompt a{display:inline-flex;align-items:center;gap:9px;font-size:13px;color:#aecae7;text-decoration:none;min-height:40px}
+.globe-prompt a:hover{text-decoration:underline}
+.globe-caption{display:block;font-size:11px;line-height:1.7;color:#a69d89;margin-top:12px}
+@media(max-width:1100px){.academy-home-logo{width:92px;height:92px}.connection-globe{width:95px;height:95px}.content[data-page] .globe-question{font-size:21px}}
+@media(max-width:900px){.home-frameworks.globe-connections{display:block;border-top:1px solid #c5b35830;padding-top:16px}.globe-connections-heading{justify-content:flex-start;gap:25px}.connection-globe{width:90px;height:90px}.globe-lenses{max-width:360px}.content[data-page] .globe-practice{min-height:0;max-width:650px}.globe-prompt{max-width:650px}}
+@media(max-width:600px){.home-concise{gap:10px}.academy-home-logo{width:65px;height:65px;align-self:flex-start;margin-top:28px}.home-concise h1{font-size:clamp(30px,8vw,42px)!important}.home-concise .eyebrow{font-size:9px;letter-spacing:.08em}.home-frameworks .globe-connections-heading h2{font-size:24px}.content[data-page] .globe-question{font-size:23px}.content[data-page] .globe-lenses button{min-height:46px}.globe-caption{font-size:12px}.academy-logo{width:55px;height:55px}}
+html[data-motion=off] .globe-meridians,html[data-motion=off] .content[data-page] .globe-lenses button{transition:none}
+@media(prefers-reduced-motion:reduce){.globe-meridians,.content[data-page] .globe-lenses button{transition:none}}
