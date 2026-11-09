@@ -38,9 +38,9 @@ AI + IB separates May 2026 official integrity guidance from original teacher pro
 
 ## PD and PLC meeting archive
 
-Eight dated entries distinguish Academy MOU, IB PLC and PD; July is month-only because an exact day is unverified. Historical resources remain public-safe summaries. The reusable agenda is an original working adaptation of the SBCUSD PLC feedback rubric and established AVHS agendas, not an official district template. Nine district values link to the public district source. Norms, rotating roles, five PLC focus areas, and follow-through fields are included.
+Eight dated entries distinguish Academy MOU, IB PLC and PD, including the verified July 28 Summer AI session. Historical resources use public-safe summaries. Three July 28 workshop PDFs are linked at their verified anyone-with-link reader destinations; their text is not rehosted. Other school-source documents remain unlinked. The reusable agenda is an original working adaptation of the SBCUSD PLC feedback rubric and established AVHS agendas, not an official district template. Nine district values link to the public district source. Norms, rotating roles, five PLC focus areas, and follow-through fields are included.
 
-Two specific Google Forms respondent URLs are intentionally allowed: Academy MOU sign-in and IB PLC sign-in. Both were verified as blank participant forms under a school account on November 8, 2026. External or anonymous form access was not tested and is not promised. No response was submitted. No attendance sheet, response view or source-document URL is included. The site remains public; Google controls each form's access separately.
+Six specific Google Forms respondent URLs are intentionally allowed: Academy MOU sign-in, IB PLC sign-in, field study/trip request, student exam-registration check, training request and extra-duty log. The attendance forms were checked as blank participant forms on November 8, 2026; the four Academy Business responder pages were checked with a school account for this meeting. No draft content is reproduced. External or anonymous form access was not tested and is not promised. No response was submitted. No attendance sheet, response view or source-document URL is included. The site remains public; Google controls each form's access separately.
 
 The November 9 academy outline uses the verified breakout window and recommended allocation; November 10's detailed workshop sequence remains labeled proposed within the confirmed full pull-out day.
 
@@ -63,3 +63,15 @@ Fourteen original, framework-informed MYP/DP lesson examples connect the ATL and
 The checklist includes five grouped submission tasks supported by official public IB 2027 examiner instructions: extended essay, early arts components, Music/Visual arts IA components, MYP uploads and later arts coursework. Eight programme/core summaries, twelve subject checks and five school-confirmation items link to public guidance. This is not the full session calendar, school policy or a student-deadline list. Other dates, local expectation sheets and monthly planning must be obtained from the programme team.
 
 Review ticks stay in tab memory and exports are personal review copies, not completion or submission records. Three blank fillable PDF templates cover daily lessons, MYP units and PD/PLC agendas. Download, edit in a compatible reader, save and reopen to verify entries. No PDF sends data back to the site.
+
+## New-teacher route and focused journeys
+
+New to IB offers MYP/DP introductions, three suggested teaching moves, coordinator questions, an expandable glossary and a downloadable reference. It uses official public IB sources and does not assign local responsibilities or invent deadlines. The module loads on demand. Its assessment summary preserves the distinct MYP personal project, DP extended essay and subject IA, with the first-assessment-2027 EE/visual arts transition flagged.
+
+Shared lesson and session links now prioritize the selected content. A Choose another control reopens the chooser; entry pages still show the full selection tools. Draft warnings use readable supporting text and explicitly distinguish in-tab changes from downloaded files or school-account saves. The reusable workshop reports six core activities separately from two optional extensions.
+
+The November 9 timed agenda has selectable blocks, previous/next controls, a focus view and the full outline. Suggested facilitation prompts connect to existing Studio activities without adding programme requirements. The data-review block does not embed or link private records; its practice link is explicitly fictional. No unverified survey, editable Canva link or private dashboard destination has been published.
+
+Academy Business distinguishes staff requests from the student registration-check form. The latter still displays October 30; a visible warning directs current corrections and deadlines to the coordinator. Extra-duty payroll-period endpoints are omitted because sources conflict. The software discussion is a neutral prompt to review resources and agree on next steps.
+
+The updated Monday working outline keeps the first 30 minutes, the 8:40 recruitment activity and 8:55 close. MYP, DP and AniVation are explicitly combined with staff forms at 8:47–8:52; software review follows at 8:52–8:55. This is the requested working agenda, not a newly issued schoolwide schedule.
