@@ -1,0 +1,18 @@
+export const routeNames={home:'Home',pd:'PD & PLC',sessions:'PD & PLC',maps:'Teaching diagrams',examples:'Lesson examples',projects:'CTE & projects',supports:'Student supports & data',subjects:'Subjects',core:'DP core',myp:'MYP unit planning',pp:'Personal project',dates:'IB & district dates',checklists:'Submission checklists',ai:'AI + IB',research:'Education research',resources:'Resource library',downloads:'Planning forms',about:'Using the Studio',ib:'IB teaching'};
+const details={maps:{atl:'ATL skills',tok:'TOK areas of knowledge',design:'MYP design cycle'},myp:{unit:'Unit organizer',atl:'ATL skills',project:'Personal project overview'},downloads:{lesson:'Daily lesson planner',myp:'MYP unit organizer',plc:'Meeting agenda'},checklists:{'early-written':'EE · March 15','early-arts':'Arts · March 15','arts-ia':'Arts IA · April 20','myp-upload':'MYP · April 20','late-arts':'Arts · April 30',requirements:'Requirements & school checks'},pd:{'nov09-mou':'November 9 · Academy MOU','nov10-pd':'November 10 · Academy PD','oct29-plc':'October 29 · IB PLC','oct26-pd':'October 26 · Academy MOU','sep24-plc':'September 24 · IB PLC','sep14-mou':'September 14 · Academy MOU','sep03-plc':'September 3 · IB PLC','jul-pd':'July · NotebookLM',archive:'Past meetings'}};
+const workshopSteps={start:'Choose your unit',evidence:'Test a claim',responsibilities:'Check programme guidance',studio:'Revise the task',challenge:'Invite a challenge',commit:'Revise & try',technology:'Technology lab',support:'Support & reflect'};
+export const lessonNames={"myp-science-water":"What can a water test tell us?","myp-maths-average":"Which average tells a fair story?","myp-history-sources":"Two accounts, one event","myp-literature-framing":"How a headline frames a story","myp-language-clarify":"Clarify before you recommend","myp-arts-readings":"One work, two interpretations","myp-phe-cues":"Which coaching cue helps?","myp-design-test":"A prototype that earns its claim","dp-science-models":"When a model stops fitting","dp-maths-proof":"A pattern is not yet a proof","dp-history-interpretations":"Why historians disagree","dp-literature-translation":"What changes in translation?","dp-language-media":"Same report, different emphasis","dp-arts-curation":"The label changes the viewing"};
+export function breadcrumbsFor(hash){
+ let [route,part]=hash.replace(/^#/,'').split('/');if(route==='sessions')route='pd';
+ const home={label:'Home',href:'#home'};
+ if(!route||route==='home'||(!routeNames[route]&&!['recruitment','workshop'].includes(route)))return [home];
+ if(route==='recruitment')return [home,{label:'PD & PLC',href:'#pd'},{label:details.pd['nov09-mou'],href:'#pd/nov09-mou'},{label:'Subject recruitment',href:'#recruitment'}];
+ if(route==='workshop')return [home,{label:'PD & PLC',href:'#pd'},{label:details.pd['nov10-pd'],href:'#pd/nov10-pd'},{label:workshopSteps[part]||'Current-unit workshop',href:'#workshop/'+(part||'start')}];
+ const crumbs=[home];if(route==='downloads')crumbs.push({label:'Resource library',href:'#resources'});
+ crumbs.push({label:routeNames[route],href:'#'+route});
+ let detail=details[route]?.[part];
+ if(route==='examples'&&part){detail=lessonNames[part]|| (part.startsWith('atl-')?'ATL: '+part.slice(4).replaceAll('-',' '):part.startsWith('tok-')?'TOK: '+part.slice(4).replaceAll('-',' '):part==='design'?'Design examples':null)}
+ if(detail)crumbs.push({label:detail,href:'#'+route+'/'+part});return crumbs;
+}
+// Record a selected lesson/session in the address without resetting its filters.
+export function replaceDetail(path){history.replaceState(null,'','#'+path);window.dispatchEvent(new Event('studio-detail'))}

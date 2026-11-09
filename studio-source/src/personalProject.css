@@ -3,3 +3,28 @@
 @media(max-width:600px){.pp-intro{grid-template-columns:1fr;padding:24px}.pp-intro-mark{display:none}.pp-role-panel,.pp-criterion-card,.pp-prep-notes,.pp-standardize,.pp-source-panel{padding:22px}.pp-role-heading{grid-template-columns:1fr}.pp-ready{display:flex;gap:10px;justify-content:flex-start}.pp-ready strong{font-size:24px}.pp-criterion-tabs{gap:6px}.pp-criterion-tabs button{flex-direction:column;align-items:flex-start;gap:8px;padding:13px 10px}.pp-criterion-tabs button>b{font-size:26px}.pp-criterion-tabs small{font-size:10px}.pp-criterion-title{gap:15px}.pp-criterion-title>span{font-size:48px}.pp-criterion-title h3{font-size:22px}.pp-strands,.pp-meeting-grid{grid-template-columns:1fr}.pp-strands{gap:20px}.pp-strands>div{padding:0}.pp-role-switch button{font-size:13px;padding:12px}.pp-coaching{gap:15px}.pp-prep-notes .btn{font-size:12px;width:100%;justify-content:center}}
 
 .pp-assessment-boundary{padding:30px;margin:25px 0}.pp-assessment-boundary h2{font-size:26px;margin:8px 0 22px}.pp-boundary-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.pp-boundary-grid h3{font-size:17px;color:var(--gold)}.pp-boundary-grid p{font-size:14px;line-height:1.75;color:var(--muted)}@media(max-width:750px){.pp-boundary-grid{grid-template-columns:1fr;gap:10px}.pp-assessment-boundary{padding:22px}}
+
+/* A working reference, with a short route to each preparation task. */
+.personal-project-page .page-intro{margin-bottom:22px}
+.pp-page-links{display:flex;align-items:center;flex-wrap:wrap;gap:8px 24px;border-top:1px solid #c5b35840;border-bottom:1px solid #c5b35828;padding:12px 0;margin:0 0 22px}
+.pp-page-links>span{font-size:11px;color:#a9a18f}
+.pp-page-links a{display:inline-flex;align-items:center;gap:7px;min-height:34px;font-size:12px;line-height:1.5;color:#cfdbeb;text-decoration:none}
+.pp-page-links a:hover{text-decoration:underline;text-underline-offset:4px}
+.pp-page-links a:focus-visible{outline:2px solid #a7c7ff;outline-offset:4px}
+.personal-project-page [tabindex="-1"]{scroll-margin-top:106px}
+.personal-project-page [tabindex="-1"]:focus{outline:none}
+.personal-project-page [tabindex="-1"]:focus-visible{outline:2px solid #a7c7ff;outline-offset:6px}
+.pp-checklist-title{font-size:23px;line-height:1.3;margin:30px 0 16px}
+.personal-project-page .pp-role-panel{background:#15140f;border-radius:6px;box-shadow:none}
+.personal-project-page .pp-role-heading h3{font-size:24px;font-weight:500;letter-spacing:-.025em;margin:0 0 12px}
+.personal-project-page .pp-role-heading p{max-width:800px}
+.personal-project-page .pp-checks{gap:0 26px}
+.personal-project-page .pp-checks label{background:none;border:0;border-bottom:1px solid #c5b35828;border-radius:0;padding:17px 0}
+.personal-project-page .pp-criterion-card{box-shadow:none;background:#15140f;border-radius:6px}
+.personal-project-page .pp-assessment-boundary,.personal-project-page .pp-source-panel{background:none;border:0;border-top:1px solid #c5b35840;border-radius:0;box-shadow:none;padding:28px 0}
+.personal-project-page .pp-meeting-grid{display:block;border-top:1px solid #c5b35830}
+.personal-project-page .pp-meeting-grid article{display:grid;grid-template-columns:34px 190px minmax(0,1fr);gap:18px;align-items:start;padding:22px 0;border:0;border-bottom:1px solid #c5b35830;background:none;border-radius:0;box-shadow:none}
+.personal-project-page .pp-meeting-grid article h3,.personal-project-page .pp-meeting-grid article p{margin:0}
+.personal-project-page .pp-meeting-grid article .step-index{font-size:19px}
+.personal-project-page .pp-prep-notes{background:#15140f;box-shadow:none;border-radius:6px}
+@media(max-width:650px){.pp-page-links{gap:5px 18px}.pp-page-links>span{width:100%}.pp-page-links a{font-size:11px}.personal-project-page .pp-meeting-grid article{grid-template-columns:25px minmax(0,1fr);gap:8px 14px}.personal-project-page .pp-meeting-grid article p{grid-column:2}.personal-project-page .pp-role-heading h3{font-size:22px}}

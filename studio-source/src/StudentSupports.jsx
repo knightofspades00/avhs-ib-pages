@@ -64,27 +64,26 @@ export default function StudentSupports({ notes, setNotes }) {
 
   return <div className="supports-page">
     <header className="supports-heading">
-      <div><p className="eyebrow">STUDENT SUPPORTS & DATA</p><h1>Keep the challenge.<br/><em>Widen the way in.</em></h1><p>Read evidence carefully. Remove a task barrier. Plan support and enrichment toward the same meaningful goal.</p></div>
-      <div className="supports-heading-mark" aria-hidden="true"><Layers size={48} strokeWidth={1}/><span>NOTICE<br/>DESIGN<br/>REVISIT</span></div>
+      <div><p className="eyebrow">STUDENT SUPPORTS & DATA</p><h1>Student supports</h1><p>Practise reading a classroom check, choose a teaching response, and plan what to look for next.</p></div>
     </header>
 
     <aside className="supports-boundary" aria-label="Data and privacy boundaries">
       <ShieldCheck size={24} aria-hidden="true"/>
-      <div><h2>Teaching tools, not student records.</h2><div className="supports-status"><span>Fictional examples only</span><span>No live connection</span><span>No AVHS records</span></div><p>These counts do not describe AVHS students or outcomes. This public page does not connect to a student information system, ingest files, or use AI to analyze learners. Use school-approved systems for any real student-level review. It does not diagnose, assign grades, or determine services or eligibility.</p></div>
+      <div><h2>Practice with fictional data</h2><div className="supports-status"><span>Fictional examples only</span><span>No live connection</span><span>No AVHS records</span></div><p>These counts do not describe AVHS students or outcomes. This public page does not connect to a student information system, ingest files, or use AI to analyze learners. Use school-approved systems for any real student-level review. It does not diagnose, assign grades, or determine services or eligibility.</p></div>
     </aside>
 
     <nav className="supports-route" aria-label="On this page">
-      {[['evidence', '01', 'Read the evidence'], ['moves', '02', 'Design the response'], ['plan', '03', 'Plan the next check']].map(([id, number, label]) => <button key={id} onClick={() => jump(id)}><span>{number}</span>{label}<ArrowRight size={16} aria-hidden="true"/></button>)}
+      {[['evidence', '01', 'Read the evidence'], ['moves', '02', 'Choose a response'], ['plan', '03', 'Plan the next check']].map(([id, number, label]) => <button key={id} onClick={() => jump(id)}><span>{number}</span>{label}<ArrowRight size={16} aria-hidden="true"/></button>)}
     </nav>
 
     <section className="supports-section" aria-labelledby={`${prefix}-evidence`}>
-      <div className="supports-section-title"><div><p className="eyebrow">01 · EVIDENCE BEFORE INFERENCE</p><h2 id={`${prefix}-evidence`} tabIndex={-1}>What does this check actually show?</h2></div><span className="supports-badge">FICTIONAL DATA</span></div>
+      <div className="supports-section-title"><div><p className="eyebrow">01 · READ THE EVIDENCE</p><h2 id={`${prefix}-evidence`} tabIndex={-1}>Read the classroom check</h2></div><span className="supports-badge">FICTIONAL DATA</span></div>
       <p className="supports-lead">{fictionalEvidence.context} Choose a feature, then test a claim about the evidence.</p>
       <div className="supports-select" role="group" aria-label="Choose a fictional evidence check">{fictionalEvidence.checks.map(check => <button key={check.id} aria-pressed={evidenceId === check.id} onClick={() => { setEvidenceId(check.id); setClaimId(null); setDownloadStatus(''); }}><Target size={16} aria-hidden="true"/>{check.label}</button>)}</div>
 
       <div className="supports-evidence-layout">
         <article className="supports-evidence-card">
-          <div className="supports-card-overline"><span>ONE PRACTICE CHECKPOINT</span><span>30 fictional learners</span></div>
+          <div className="supports-card-overline"><span>PRACTICE CHECKPOINT</span><span>30 fictional learners</span></div>
           <h3>{evidence.label}</h3><p className="supports-criterion"><strong>Feature:</strong> {evidence.criterion}</p>
           <dl className="supports-counts">
             <div><dt>Feature visible</dt><dd>{counts.meets}<span> / {counts.observed}</span><small>{counts.observedPercent}% of observed responses</small></dd></div>
@@ -96,17 +95,17 @@ export default function StudentSupports({ notes, setNotes }) {
         </article>
 
         <article className="supports-claim-card">
-          <p className="eyebrow">TRY AN INTERPRETATION</p><h3>Which claims can the evidence support?</h3><p>Select a statement to inspect its reasoning. This is a practice check, not a test score.</p>
+          <p className="eyebrow">TRY AN INTERPRETATION</p><h3>Check an interpretation</h3><p>Select a statement to inspect its reasoning. This is a practice check, not a test score.</p>
           <div className="supports-claim-options" role="group" aria-label="Inspect an evidence claim">{claims.map((claim, index) => <button key={claim.id} aria-pressed={claimId === claim.id} aria-describedby={claimId === claim.id ? `${prefix}-claim-feedback` : undefined} onClick={() => setClaimId(claim.id)}><span aria-hidden="true">{String.fromCharCode(65 + index)}</span>{claim.text}</button>)}</div>
           <div className="supports-feedback" id={`${prefix}-claim-feedback`} role="status">{selectedClaim ? <><strong>{selectedClaim.verdict}</strong><p>{selectedClaim.explanation}</p></> : <p><Info size={16} aria-hidden="true"/> Choose a statement above to see what it can, and cannot, establish.</p>}</div>
         </article>
       </div>
-      <div className="supports-next"><div><p className="eyebrow">A BETTER NEXT QUESTION</p><p>{evidence.next}</p></div><button className="btn secondary" onClick={() => { chooseMove(evidence.focus); jump('moves'); }}>Explore a teaching response<ArrowRight size={16} aria-hidden="true"/></button></div>
+      <div className="supports-next"><div><p className="eyebrow">WHAT TO CHECK NEXT</p><p>{evidence.next}</p></div><button className="btn secondary" onClick={() => { chooseMove(evidence.focus); jump('moves'); }}>Explore a teaching response<ArrowRight size={16} aria-hidden="true"/></button></div>
       <details className="supports-assumptions"><summary>Read all fictional counts and assumptions</summary><div className="supports-table-wrap"><table><caption>Invented counts for one class of 30. Rows overlap and must not be added.</caption><thead><tr><th scope="col">Practice feature</th><th scope="col">Feature visible / observed</th><th scope="col">Not yet visible / observed</th><th scope="col">Missing / expected</th></tr></thead><tbody>{fictionalEvidence.checks.map(check => { const c = evidenceCounts(check); return <tr key={check.id}><th scope="row">{check.label}</th><td>{c.meets} / {c.observed}</td><td>{c.notYet} / {c.observed}</td><td>{c.missing} / {c.total}</td></tr>; })}</tbody></table></div><ul>{fictionalEvidence.assumptions.map(assumption => <li key={assumption}>{assumption}</li>)}</ul></details>
     </section>
 
     <section className="supports-section" aria-labelledby={`${prefix}-moves`}>
-      <div className="supports-section-title"><div><p className="eyebrow">02 · DESIGN FOR LEARNER VARIABILITY</p><h2 id={`${prefix}-moves`} tabIndex={-1}>One goal. More than one route.</h2></div></div>
+      <div className="supports-section-title"><div><p className="eyebrow">02 · CHOOSE A RESPONSE</p><h2 id={`${prefix}-moves`} tabIndex={-1}>Choose support and extension</h2></div></div>
       <p className="supports-lead">Start with a possible barrier in the task, not a label for a learner. These original examples draw on CAST’s UDL Guidelines. They are options to try and review, not a prescription from a score.</p>
       <div className="supports-select" role="group" aria-label="Choose a teaching focus">{supportMoves.map(option => <button key={option.id} aria-pressed={moveId === option.id} onClick={() => chooseMove(option.id)}>{option.label}</button>)}</div>
       <div className="supports-design-context"><div><span className="supports-badge">{move.principle}</span><h3>{move.question}</h3><p><strong>Keep the goal:</strong> {move.goal}</p></div><div><p className="eyebrow">A BARRIER TO INVESTIGATE</p><p>{move.barrier}</p></div></div>
@@ -116,12 +115,12 @@ export default function StudentSupports({ notes, setNotes }) {
     </section>
 
     <section className="supports-section" aria-labelledby={`${prefix}-plan`}>
-      <div className="supports-section-title"><div><p className="eyebrow">03 · FROM NOTICE TO NEXT STEP</p><h2 id={`${prefix}-plan`} tabIndex={-1}>Plan a response. Set a review point.</h2></div><span className="supports-badge">15-MINUTE TEAM PROTOCOL</span></div>
+      <div className="supports-section-title"><div><p className="eyebrow">03 · PLAN AND REVIEW</p><h2 id={`${prefix}-plan`} tabIndex={-1}>Plan the next lesson together</h2></div><span className="supports-badge">15-MINUTE TEAM PROTOCOL</span></div>
       <p className="supports-lead">Use this original protocol to plan classroom support or enrichment. It is not an official school intervention process. Individual intervention, formal accommodations, and service decisions belong with the appropriate school team and approved systems.</p>
       <ol className="supports-protocol">{supportProtocol.map((step, index) => <li key={step.title}><span className="supports-step-number">0{index + 1}</span><div><div className="supports-step-title"><h3>{step.title}</h3><span>{step.time}</span></div><p>{step.prompt}</p></div></li>)}</ol>
 
       <div className="supports-notes">
-        <div className="supports-notes-header"><div><p className="eyebrow">OPTIONAL · GENERAL LESSON PREPARATION</p><h3>Take a small plan into tomorrow.</h3></div><button className="btn gold" onClick={download}><Download size={16} aria-hidden="true"/>Download plan (.txt)</button></div>
+        <div className="supports-notes-header"><div><p className="eyebrow">OPTIONAL · GENERAL LESSON PREPARATION</p><h3>Lesson preparation notes</h3></div><button className="btn gold" onClick={download}><Download size={16} aria-hidden="true"/>Download plan (.txt)</button></div>
         <p className="supports-note-boundary" id={`${prefix}-privacy`}><ShieldCheck size={18} aria-hidden="true"/><span><strong>Do not enter names, grades, disability details, individual cases, student work, or private links.</strong> Write only generic lesson-design notes. Notes are held in this tab’s memory, with no saving service, and clear on reload. Download a copy if you want to keep them.</span></p>
         {supportPlanFields.map(field => <label className="supports-field" key={field.id} htmlFor={`${prefix}-${field.id}`}><span>{field.label}</span><small id={`${prefix}-${field.id}-hint`}>{field.hint}</small><textarea id={`${prefix}-${field.id}`} aria-describedby={`${prefix}-privacy ${prefix}-${field.id}-hint`} rows={3} maxLength={1200} autoComplete="off" value={plan[field.id] || ''} onChange={event => edit(field.id, event.target.value)} placeholder={field.placeholder}/></label>)}
         <p className="supports-download-note">The text download includes your selected teaching focus, scaffold and extension, general notes, the team protocol, fictional example, and public sources. It is not submitted or shared.</p>
@@ -129,7 +128,7 @@ export default function StudentSupports({ notes, setNotes }) {
       </div>
     </section>
 
-    <section className="supports-sources" aria-labelledby={`${prefix}-sources`}><div><p className="eyebrow">READ THE ORIGINAL GUIDANCE</p><h2 id={`${prefix}-sources`}>Sources, scope, and safeguards.</h2><p>The examples and protocol are original editorial teaching aids, not institutional approvals. A classroom check is not a diagnosis, and an apparent improvement does not establish that a strategy caused it.</p></div><div className="supports-source-grid">{supportSources.map(source => <SourceLink key={source.url} source={source}/>)}</div><div className="supports-release-note"><ShieldCheck size={18} aria-hidden="true"/><p><strong>For real aggregate data:</strong> removing names is not enough. Small groups or linked details can reveal identities. Do not copy real counts or cases into this public tool. Use your school’s approved review and disclosure process; this page supplies no universal “safe group size.”</p></div></section>
+    <section className="supports-sources" aria-labelledby={`${prefix}-sources`}><div><p className="eyebrow">READ THE ORIGINAL GUIDANCE</p><h2 id={`${prefix}-sources`}>Sources and limitations</h2><p>The examples and protocol are original editorial teaching aids, not institutional approvals. A classroom check is not a diagnosis, and an apparent improvement does not establish that a strategy caused it.</p></div><div className="supports-source-grid">{supportSources.map(source => <SourceLink key={source.url} source={source}/>)}</div><div className="supports-release-note"><ShieldCheck size={18} aria-hidden="true"/><p><strong>For real aggregate data:</strong> removing names is not enough. Small groups or linked details can reveal identities. Do not copy real counts or cases into this public tool. Use your school’s approved review and disclosure process; this page supplies no universal “safe group size.”</p></div></section>
     <div className="supports-related"><a href="#maps/atl"><BookOpen size={18} aria-hidden="true"/>Connect to ATL teaching<ArrowRight size={16} aria-hidden="true"/></a><a href="#pd"><MessageSquare size={18} aria-hidden="true"/>Bring a question to your PLC<ArrowRight size={16} aria-hidden="true"/></a></div>
   </div>;
 }

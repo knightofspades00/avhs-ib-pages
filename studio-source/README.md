@@ -4,7 +4,7 @@ Public teacher-learning edition, built with React 19 and Vite 6. Run `npm ci`, `
 
 ## Included
 
-Monday/Tuesday presenter hub and direct activity launchers, subject pathways, DP core, MYP planning and ATL, research reading room, curated teaching summaries, recruitment workspace, and personal-project supervisor/lead-teacher preparation.
+Dated PD/PLC sessions and direct activity launchers, subject pathways, DP core, MYP planning and ATL, research reading room, curated teaching summaries, recruitment workspace, and personal-project supervisor/lead-teacher preparation.
 
 Black and Vegas gold form the studio palette, with blue accents. The school/academy text hierarchy is grounded in the official school page; this is a design interpretation, not an official color specification. No school logo assets are copied.
 
@@ -24,7 +24,7 @@ Calm view and reduced-motion styling disable animation. Short transitions use op
 
 Original React diagrams for MYP ATL (five categories, ten clusters), TOK (five areas of knowledge and four shared lenses, with pairwise comparisons), and the iterative MYP Design cycle. These are teaching aids, not official graphics or assessment rubrics. MYP Design A–D is explicitly distinguished from Personal Project A–C. Complete text alternatives and downloadable teaching guides contain the same original prompts. Official public sources are linked; the older ATL mapping source is labeled.
 
-Home provides a concise route to dated PD/PLC sessions, classroom examples and the research library. Sidebar groups separate facilitation, planning, programme support and reading. No additional hosting or audience changes are included.
+Home provides three direct routes: join a PD/PLC session, plan a lesson, or get a planning form. Teaching diagrams and the wider resource collection remain one step away. Sidebar groups separate planning, programme support and reading. No additional hosting or audience changes are included.
 
 ## Tactile interactions
 
@@ -49,6 +49,10 @@ The November 9 academy outline uses the verified breakout window and recommended
 Home is a concise landing page. Dated PD/PLC pages contain the meeting outline, relevant activities, supporting tools and verified attendance destination where applicable. The legacy `#sessions` link opens the meeting hub; workshop and recruitment return links go to their own November 10 / November 9 session. No programme-updates feed has been invented.
 
 The Tuesday day outline is confirmed, while the six-activity workshop remains proposed and estimated at about 60 minutes. Technology and support are separately labeled optional extensions, not an afternoon assignment. The activity timer pauses when leaving its view. Drafts remain in tab memory and downloads are local text files, not submissions or account saves. Research-list notices appear before interaction, and personal-project notes have a direct keyboard-accessible jump link.
+
+Linked breadcrumbs provide return paths from meeting activities, lesson examples and forms. Selected meetings and lessons have bookmarkable addresses without resetting active filters. In-page links move keyboard focus to the agenda, planning fields or notes without changing the route. The mobile menu has a close button, Escape dismissal, focus containment and an inert background. Page changes have no fade animation; purposeful diagram and criterion interactions retain their tactile controls.
+
+Short page headings and direct instructions replace repeated introductions. Meeting agendas appear before general guidance; lesson preparation, daily agendas and editable drafts are separated clearly. Reading lists use simpler rows, with larger body text and less repeated framing. The planning-forms procedure explains downloading, saving and reopening a local copy, without implying online submission.
 
 ## Daily teaching, projects and support
 

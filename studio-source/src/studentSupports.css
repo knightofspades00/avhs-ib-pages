@@ -145,3 +145,25 @@
 @media(max-width:750px){.supports-heading h1{font-size:46px}.supports-heading>div:first-child>p:last-child{font-size:14px}.supports-route{grid-template-columns:1fr;gap:8px;margin-bottom:35px}.supports-route button{min-height:50px}.supports-section-title{align-items:flex-start;flex-direction:column;gap:13px}.supports-move-grid,.supports-design-context{grid-template-columns:1fr}.supports-design-context{gap:22px}.supports-design-context>div+div{border-left:0;border-top:1px solid var(--support-border);padding:18px 0 0}.supports-move-card ol{margin-bottom:8px}.supports-status{gap:6px 14px}.supports-status span+span:before{display:none}.supports-counts{grid-template-columns:1fr 1fr}.supports-counts .supports-missing{grid-column:1/-1;display:block;border-top:1px solid var(--support-border);border-left:0;padding:13px 16px}.supports-missing dd{font-size:26px;margin:8px 0 0}.supports-missing dd span{font-size:16px}.supports-protocol>li{gap:17px}.supports-boundary{padding:20px;gap:13px}.supports-boundary h2{font-size:16px}}
 @media(max-width:450px){.supports-heading h1{font-size:37px}.supports-heading .eyebrow{font-size:9px}.supports-heading>div:first-child>p:last-child{font-size:13px}.supports-boundary>svg{width:19px}.supports-status{flex-direction:column;gap:5px}.supports-select{gap:7px}.supports-select button{padding:11px 12px;font-size:11px}.supports-evidence-card,.supports-claim-card,.supports-design-context,.supports-move-card,.supports-notes,.supports-sources{padding:20px}.supports-counts>div{padding:16px 12px}.supports-counts dd{font-size:31px}.supports-counts dd span{font-size:17px}.supports-counts small{font-size:10px}.supports-counts .supports-missing{padding:13px 12px}.supports-section-title h2,.supports-sources h2{font-size:26px}.supports-lead{font-size:13px}.supports-next{padding:20px}.supports-next .btn{max-width:100%;font-size:10px;gap:8px}.supports-assumptions th,.supports-assumptions td{padding:10px 7px}.supports-assumptions table{font-size:10px}.supports-assumptions thead th{font-size:9px}.supports-notes-header h3{font-size:23px}.supports-note-boundary{padding:14px}.supports-field textarea{font-size:16px}.supports-step-title h3{font-size:14px}.supports-caution{font-size:11px}}
 @media(prefers-reduced-motion:reduce){.supports-page *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* A practice workflow, without a second hero or decorative status cards. */
+.supports-page .supports-heading{margin-bottom:23px}
+.supports-page .supports-heading h1{font-size:clamp(36px,4vw,54px);letter-spacing:-.035em;line-height:1.15;margin:14px 0 16px}
+.supports-page .supports-heading>div:first-child>p:last-child{max-width:760px;font-size:15px}
+.supports-page .supports-boundary{padding:4px 0 4px 18px;border:0;border-left:2px solid #729ac47a;background:none;border-radius:0;gap:12px}
+.supports-page .supports-boundary>svg{width:19px}
+.supports-page .supports-boundary h2{font-size:16px;margin-bottom:7px}
+.supports-page .supports-status{gap:8px 14px}
+.supports-page .supports-status span{font-size:10px}
+.supports-page .supports-boundary p{font-size:12px;margin-top:9px}
+.supports-page .supports-route{gap:0;border-top:1px solid #c5b35840;border-bottom:1px solid #c5b35828;margin:24px 0 35px}
+.supports-page .supports-route button{border:0;border-radius:0;background:none;padding:14px 10px;min-height:52px}
+.supports-page .supports-route button:first-child{padding-left:0}
+.supports-page .supports-route button:hover{background:#c5b35809}
+.supports-page .supports-evidence-card,.supports-page .supports-claim-card{background:none;border-radius:6px}
+.supports-page .supports-design-context{background:none;border-radius:0;border:0;border-bottom:1px solid #c5b35830;padding:0 0 24px;margin-bottom:24px}
+.supports-page .supports-move-card{border:0;border-top:2px solid #c5b35870;background:#c5b35806;border-radius:0}
+.supports-page .supports-extension{background:#7c9fc208;border-top-color:#7c9fc270}
+.supports-page .supports-notes{background:#15140f;border-radius:6px}
+.supports-page .supports-sources{border:0;border-top:1px solid #c5b35840;border-radius:0;background:none;padding:28px 0}
+@media(max-width:750px){.supports-page .supports-route button{padding:12px 0;border-bottom:1px solid #c5b35818}.supports-page .supports-route button:last-child{border:0}.supports-page .supports-design-context>div+div{padding-left:0}}

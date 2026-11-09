@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
-    "check": "node scripts/check.mjs && node scripts/check-lessons.mjs && node scripts/check-student-supports.mjs && node scripts/check-submission-checklists.mjs && node scripts/check-planning-downloads.mjs"
+    "check": "node scripts/check.mjs && node scripts/check-lessons.mjs && node scripts/check-student-supports.mjs && node scripts/check-submission-checklists.mjs && node scripts/check-planning-downloads.mjs && node scripts/check-navigation.mjs"
   },
   "dependencies": {
     "react": "^19.2.0",
