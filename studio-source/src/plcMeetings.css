@@ -11,3 +11,16 @@
 .plc-role-heading{margin-top:24px!important}.plc-role-chips{display:flex;flex-wrap:wrap;gap:8px}.plc-role-chips>span{padding:7px 10px;border:1px solid #c5b35840;border-radius:6px;font-size:10px;color:#d3c593;background:#211d12}.plc-focus-areas li{padding-left:4px;margin-bottom:17px}.plc-focus-areas li strong{color:#ded1ae;font-size:12px}.plc-focus-areas li p{margin:5px 0 0;color:#aba698;line-height:1.7;font-size:11px}
 
 .plc-routine>summary{cursor:pointer;list-style:none;margin:0}.plc-routine>summary::-webkit-details-marker{display:none}.plc-routine[open]>summary{margin-bottom:25px}.plc-routine>summary h2{font-size:25px}.plc-routine>summary>svg{transition:transform 180ms}.plc-routine[open]>summary>svg{transform:rotate(180deg)}.plc-routine .plc-routine-grid{animation:none}.plc-meetings:focus{outline:none}@media(prefers-reduced-motion:reduce){.plc-routine>summary>svg{transition:none}}html[data-motion=off] .plc-routine>summary>svg{transition:none}
+
+/* Monday entry resources precede the long agenda and outcomes. */
+.plc-meeting-detail header>p.monday-meeting-place{display:inline-block;margin:0 0 4px;padding:9px 13px;border:1px solid #c5b35866;border-radius:7px;background:#282213;color:#f0dfaa;font-size:15px;font-weight:650;line-height:1.5}
+.monday-access{margin:22px 0;scroll-margin-top:90px}.monday-access>h3{font-size:14px;margin-bottom:12px}.monday-access-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.monday-access-grid>div{display:flex;align-items:flex-start;gap:12px;padding:18px;border:1px solid #c5b35855;border-radius:10px;background:#201c12;min-width:0}.monday-access-grid>div>svg{flex-shrink:0;color:#d4bf7c}.monday-access-grid>div>div{min-width:0}.monday-access h4{font-size:15px;line-height:1.4;margin:0 0 8px;color:#f0e3be}.monday-access p{font-size:12px;line-height:1.6;color:#c9c2b2;margin:0 0 10px}.monday-access p:last-child{margin-bottom:0}.monday-access .btn{min-height:44px;white-space:normal;max-width:100%;box-sizing:border-box;justify-content:center}.monday-access .btn svg{flex-shrink:0}.monday-access-grid>.monday-presentation{background:#141b22;border-color:#7d9bb64d}.monday-presentation>svg{color:#a8c4df!important}.monday-access .monday-presentation-theme{font-size:15px;color:#e2eaf2}.monday-access .monday-presentation-title{font-size:10px;letter-spacing:.04em;color:#aab9c8}
+@media(max-width:700px){.monday-access-grid{grid-template-columns:1fr}.monday-access-grid>div{padding:16px}.monday-access .btn{width:100%}.plc-meeting-detail header>p.monday-meeting-place{font-size:14px}}
+
+/* Keep meeting access legible when projected and preserve phone touch targets. */
+.content[data-page="pd"] .monday-access .btn{min-height:48px;font-size:14px}
+.content[data-page="pd"] .monday-access h4,.content[data-page="pd"] .monday-access .monday-presentation-theme{font-size:18px}
+.content[data-page="pd"] .monday-access p{font-size:14px}
+.content[data-page="pd"] .monday-access .monday-presentation-title{font-size:12px}
+
+.monday-signin-qr{display:block;width:260px;max-width:100%;height:auto;background:white;margin:12px 0}.content[data-page="pd"] .monday-access .monday-signin-short{display:block;color:#c5e2ff;font-size:20px;font-weight:650;line-height:1.5;overflow-wrap:anywhere;margin:0 0 16px}.monday-signin-short:focus-visible{outline:3px solid #a5cbed;outline-offset:4px}
