@@ -17,7 +17,7 @@ const main=readFileSync('src/main.jsx','utf8'),pageLinks=readFileSync('src/PageL
 assert(main.includes('<Breadcrumbs hash={hash}'));assert(crumbs.includes('aria-label="Breadcrumb"'));assert(crumbs.includes('aria-current="page"'));assert(pageLinks.includes('e.preventDefault()'));assert(pageLinks.includes('node.focus({preventScroll:true})'));
 assert(main.includes("id={'unit-'+title.toLowerCase()}"));
 const meetings=readFileSync('src/PDArchive.jsx','utf8');for(const id of ['meeting-outcomes','meeting-agenda','meeting-activities','meeting-resources'])assert(meetings.includes('id="'+id+'"'));
-assert(meetings.indexOf('className="plc-meetings"')<meetings.indexOf('className="plc-routine"'));
+assert(meetings.indexOf('className="plc-routine"')<meetings.indexOf('className="plc-meetings"'));
 assert(readFileSync('src/LessonExamples.jsx','utf8').includes('Choose another lesson'));
 assert(!readFileSync('src/legacy.js','utf8').includes('Still to organize.'));
 console.log('PASS linked breadcrumbs, all dated/lesson detail paths, in-page jumps, workflow destinations and plain resource navigation.');
