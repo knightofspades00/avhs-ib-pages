@@ -14,7 +14,7 @@ assert.equal(subjectAIExamples.length,9);assert.equal(designNoteFields.length,11
 for(const example of subjectAIExamples){for(const key of ['use','check','thinking','noAI','knowledge'])assert(example[key]?.length>30);for(const p of ['MYP','DP','CTE']){const href=exampleCurriculumUrl(example,p);assert(href===null||href.startsWith('https://www.ibo.org/'))}}
 assert.equal(exampleCurriculumUrl(subjectAIExamples.at(-1),'DP'),null);assert(programmeAnchors.CTE.text.includes('Career-related Programme'));
 const component=readFileSync('src/CollaborationDay.jsx','utf8'),css=readFileSync('src/collaborationDay.css','utf8');
-assert(component.includes('Deliberately flawed, fictional response'));assert(component.includes('Do not upload protected IB guides'));assert(component.includes('URL.revokeObjectURL'));assert(component.includes('beforeunload'));
+assert(component.includes('Curiosity is a compass.'));assert(component.includes('A starting perspective from Sam for discussion, not a measured finding'));assert(component.includes('Offer choice within the curriculum.'));assert(component.includes('no extra task or time block'));assert(component.includes('Deliberately flawed, fictional response'));assert(component.includes('Do not upload protected IB guides'));assert(component.includes('URL.revokeObjectURL'));assert(component.includes('beforeunload'));
 assert(!/localStorage|sessionStorage|fetch\(/.test(component));assert(!/Sosa|evaluat(?:es|ing) Sam|REVIEW DRAFT|NOT PUBLISHED/.test(component));
 assert(css.includes('prefers-reduced-motion'));assert(css.includes('html[data-motion=off]'));assert(css.includes('focus-visible'));
 const temp=mkdtempSync(join(tmpdir(),'collaboration-day-'));
