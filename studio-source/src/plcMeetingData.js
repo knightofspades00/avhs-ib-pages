@@ -21,7 +21,147 @@ export const meetingStandards={
 export const staffSignIn={note:'Choose the form for your meeting. Google Forms may require your school account; the Learning Studio itself has no sign-in. Nothing is submitted from this page.',links:[{label:'Academy MOU sign-in',url:'https://docs.google.com/forms/d/e/1FAIpQLSfmgxGVopiFc4bV-rcK57VSlPB9Tg-vZKVpr9B1Qhej8T5I6A/viewform'},{label:'IB PLC sign-in',url:'https://docs.google.com/forms/d/e/1FAIpQLSeApPyfCrK3gAb0JSWNi-nSuJnlcBR8npN_oPXoi5_UmN1S7A/viewform?usp=send_form'}]};
 
 export const plcMeetings=[
- {id:'nov10-pd',date:'2026-11-10',type:'PD',title:'Academy PD and planning day',status:'Confirmed day · proposed workshop',time:'Collaboration begins at 8:30 a.m.; academy work continues until 3:30 p.m.',location:'H104',summary:'Morning professional development and afternoon academy work. The current-unit workshop below is a proposed activity sequence; confirm its place in the day with the facilitator.',outcomes:['One classroom task connected to the subject curriculum and a student learning need.','One evidence-informed response, an owner and a review point.'],resourceIds:[],agenda:[['8:30–11:00','Morning professional learning and information with the organizing team'],['11:00–noon','Proposed lesson workshop: inquiry, evidence, ATL, TOK and revision'],['Noon–1:00','Lunch'],['1:00–2:00','Proposed academy data deep dive'],['2:00–2:10','Break'],['2:10–2:40','Proposed AI / technology practice · 30 minutes'],['2:40–3:10','Proposed programme planning'],['3:10–3:30','Proposed share-out: actions and review evidence']],activities:[['#workshop/start','Core workshop: revise one task','Six activities, about 60 minutes as a planning estimate. Bring a current unit and leave with a downloadable organizer. Confirm where this sequence fits in the day.'],['#workshop/technology','Technology practice: proposed 2:10–2:40 block','Apply the same task to a teacher-reviewed tool or an equivalent paper route.'],['#workshop/support','Optional support and reflection','Plan a general classroom response without entering student information.']],supportingTools:[['#downloads','Fillable planning PDFs'],['#checklists','Programme submission checklists'],['#examples','Daily lesson examples'],['#projects','CTE and project planning'],['#supports','Student supports and data practice'],['#maps/atl','ATL, TOK and design diagrams'],['#myp/unit','MYP unit organizer'],['#ai','AI + IB guidance'],['#research','Education research']],note:'Tuesday collaboration begins at 8:30 a.m. in H104. The day outline retains lunch noon–1:00 and academy work 1:00–3:30. The 11:00 lesson workshop and afternoon blocks are a proposed facilitation plan. Follow the organizing team’s final directions.'},
+ {
+  "id": "nov10-pd",
+  "date": "2026-11-10",
+  "type": "PD",
+  "title": "Academy PD and unit design day",
+  "status": "Whole-day learning agenda",
+  "time": "8:30 a.m.–3:30 p.m.",
+  "location": "H104",
+  "summary": "Build on a teaching strength and develop one current unit or new topic across the day. Model inquiry, critique AI, design and rehearse a first lesson, then use evidence to refine support and extension.",
+  "outcomes": [
+    "A teachable unit draft with visible learning goals, success criteria and a first-lesson feedback checkpoint.",
+    "A before-and-after revision with a rationale, an evidence-informed support and extension plan, and an owner and review measure."
+  ],
+  "resourceIds": [],
+  "agenda": [
+    [
+      "8:30–8:45",
+      "Build on strengths; choose a unit or new topic"
+    ],
+    [
+      "8:45–9:10",
+      "Inquiry model and AI critique"
+    ],
+    [
+      "9:10–9:35",
+      "MYP / DP anchors and CTE / PBL / WBL connections"
+    ],
+    [
+      "9:35–9:45",
+      "Break"
+    ],
+    [
+      "9:45–10:15",
+      "Subject-specific AI / technology lab on the chosen unit"
+    ],
+    [
+      "10:15–10:45",
+      "Unit design studio"
+    ],
+    [
+      "10:45–11:00",
+      "Prepare a teachable draft and evidence question"
+    ],
+    [
+      "11:00–11:10",
+      "Make learning goals and success criteria visible"
+    ],
+    [
+      "11:10–11:30",
+      "Plan and rehearse the first lesson and feedback checkpoint"
+    ],
+    [
+      "11:30–11:45",
+      "Structured peer critique"
+    ],
+    [
+      "11:45–noon",
+      "Revise and share the before-and-after rationale"
+    ],
+    [
+      "Noon–1:00",
+      "Lunch"
+    ],
+    [
+      "1:00–2:00",
+      "Data deep dive linked to the same unit"
+    ],
+    [
+      "2:00–2:10",
+      "Break"
+    ],
+    [
+      "2:10–2:40",
+      "Adapt support, extension and a resource using evidence"
+    ],
+    [
+      "2:40–3:10",
+      "Programme and implementation checks"
+    ],
+    [
+      "3:10–3:30",
+      "Commitments and review measures"
+    ]
+  ],
+  "activities": [
+    [
+      "#workshop/start",
+      "Optional reusable task workshop",
+      "A separate six-step tool for revising one task, with suggested timings. It does not replace the whole-day agenda."
+    ],
+    [
+      "#workshop/technology",
+      "Technology practice cards",
+      "Use a teacher-reviewed example, an approved tool or an equivalent paper route in the 9:45–10:15 lab."
+    ],
+    [
+      "#workshop/support",
+      "Support and reflection tool",
+      "Use evidence to plan classroom support without entering student information."
+    ]
+  ],
+  "supportingTools": [
+    [
+      "#downloads",
+      "Fillable planning PDFs"
+    ],
+    [
+      "#checklists",
+      "Programme submission checklists"
+    ],
+    [
+      "#examples",
+      "Daily lesson examples"
+    ],
+    [
+      "#projects",
+      "CTE and project planning"
+    ],
+    [
+      "#supports",
+      "Student supports and data practice"
+    ],
+    [
+      "#maps/atl",
+      "ATL, TOK and design diagrams"
+    ],
+    [
+      "#myp/unit",
+      "MYP unit organizer"
+    ],
+    [
+      "#ai",
+      "AI + IB guidance"
+    ],
+    [
+      "#research",
+      "Education research"
+    ]
+  ],
+  "note": "Begin at 8:30 a.m. in H104. Keep the same chosen unit or new topic through the morning design work and afternoon evidence review. Lunch is noon–1:00; collaboration closes at 3:30. Keep student records in approved school systems and confidential content off the projector. Live AI is optional; teacher review and an equivalent no-AI route remain essential."
+},
  {id:'nov09-mou',date:'2026-11-09',type:'Academy MOU',title:'Academy collaboration MOU',status:'Updated working agenda',time:'8:00–9:00 a.m. academy breakout',location:'H103',summary:'Review academy work, confirm programme priorities and draft a clear subject message for prospective students.',outcomes:['Academy and programme next steps.','Two or three concrete subject benefits and one student-facing sentence.'],resourceIds:[],activities:[['#recruitment','Run the 7-minute recruitment activity','Discuss for three minutes, draft for two, then give a brief report-out.'],['#subjects','Find your subject group','Use examples from actual classroom learning.'],['#pp','Review personal-project support','Open supervisor and lead-teacher preparation tools as needed.']],supportingTools:[['#myp','MYP planning'],['#core','DP core'],['#dates','IB planning dates'],['#supports','Student supports and data practice']],agenda:[['8:00–8:15','Academy Interest Survey'],['8:15–8:25','First-semester work-based learning review'],['8:25–8:30','Second-semester ideas'],['8:30–8:38','Data review'],['8:38–8:40','Teaching follow-through'],['8:40–8:47','Subject-group recruitment activity'],['8:47–8:52','Academy business: MYP, DP, AniVation and staff forms'],['8:52–8:55','Review software resources and next steps'],['8:55–9:00','Close and next steps']],note:'The academy breakout is 8:00–9:00 in H103, within the broader 7:40–9:10 schoolwide MOU window. The first 30 minutes and the 8:55 close are retained. This updated working outline combines MYP, DP and AniVation updates with staff forms at 8:47, then makes space for a three-minute software review. The 15/10/5/30-minute allocation was a meeting recommendation, not a standing PLC rule. Confirm operational details with the facilitator.'},
  {id:'oct29-plc',date:'2026-10-29',type:'IB PLC',title:'Task revision and follow-through',status:'Past session summary',time:'3:50–4:50 p.m.',location:'F107',summary:'Clarify a task, build in feedback and revision, and decide what evidence to bring back.',outcomes:['A clearer task and success criterion.','A classroom trial and a follow-up question.'],resourceIds:['oct29-task'],activities:[],note:'Teaching content only. The original agenda, attendance, student data and administrative records are not reproduced.'},
  {id:'oct26-pd',date:'2026-10-26',type:'Academy MOU',title:'CER, ATL and TOK in classroom tasks',status:'Past session summary',time:'7:40–9:10 a.m. MOU window',location:'Cafeteria and breakout rooms; TOK/ATL session in N101',summary:'Use a worked example and subject-specific planning prompts to connect evidence, reasoning and an observable ATL skill.',outcomes:['A distinction between observation and interpretation.','One practical change to an existing lesson.'],resourceIds:['oct26-arts','oct26-toolkit'],activities:[],note:'The public summaries below describe the teaching resources. The original staff documents remain in the school workspace.'},
