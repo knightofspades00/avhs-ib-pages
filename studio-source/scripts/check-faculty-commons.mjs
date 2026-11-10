@@ -1,0 +1,31 @@
+import assert from 'node:assert/strict';
+import {readFileSync,mkdtempSync,rmSync} from 'node:fs';
+import {tmpdir} from 'node:os';
+import {join} from 'node:path';
+import {createRequire} from 'node:module';
+import {build} from 'esbuild';
+import {findTools,toolDirectory,teachingPaths,pageContinuations} from '../src/facultyToolsData.js';
+import {routeNames} from '../src/navigationData.js';
+import {plcMeetings} from '../src/plcMeetingData.js';
+import {subjectCurriculumLinks,fullSubjectGuideUrl,subjectTeachingMoves} from '../src/subjectCurriculumData.js';
+import {subjects} from '../src/data.js';
+import {meetingLaunchLabel} from '../src/meetingPresenterData.js';
+for(const programme of ['DP','MYP']){assert.equal(subjectCurriculumLinks[programme].length,subjects[programme].length);assert(subjectCurriculumLinks[programme].every(x=>x.startsWith('https://www.ibo.org/')))}assert.equal(fullSubjectGuideUrl,'https://resources.ibo.org/');assert.equal(subjectTeachingMoves.length,8);
+const known=new Set([...Object.keys(routeNames),'workshop','recruitment','present']);
+for(const row of [...toolDirectory,...Object.values(teachingPaths).flatMap(x=>x.links),...Object.values(pageContinuations).flatMap(x=>x.slice(1))])assert(known.has(row[0].slice(1).split('/')[0]),row[0]);
+assert.equal(new Set(toolDirectory.map(x=>x[0])).size,toolDirectory.length);
+assert.equal(findTools('pdf').length,1);assert.equal(findTools('unmatched-not-a-tool').length,0);assert(findTools('ATL').some(x=>x[0]==='#maps/atl'));assert(findTools('today').some(x=>x[0]==='#present/nov10-pd'));
+assert.equal(Object.keys(teachingPaths).length,3);
+const meeting=plcMeetings.find(m=>m.id==='nov10-pd');assert.equal(meeting.location,'H104');assert(meeting.time.includes('8:30'));assert(!JSON.stringify(meeting).includes('8:00'));
+assert.equal(meetingLaunchLabel(new Date('2026-11-10T16:00:00Z'),'nov10-pd'),"Today's collaboration");
+const main=readFileSync('src/main.jsx','utf8'),legacy=readFileSync('src/legacy.js','utf8');assert(main.includes('<ToolFinder/>'));assert(main.includes('<PageContinuation route={route}/>'));assert(main.includes('meetingId={part}'));assert(main.includes('Faculty Commons'));assert(legacy.includes("title:'Technology lab',sub:'30 min'"));assert(!legacy.includes('not a scheduled afternoon assignment'));assert(legacy.includes('2:10–2:40'));
+const css=readFileSync('src/facultyCommons.css','utf8');assert(css.includes('prefers-reduced-motion'));assert(css.includes('html[data-motion=off]'));assert(css.includes('focus-visible'));assert(css.includes('@media(max-width:600px)'));
+const temp=mkdtempSync(join(tmpdir(),'faculty-commons-'));
+try{
+ const outfile=join(temp,'render.cjs');await build({stdin:{contents:"import React from 'react';import{renderToStaticMarkup}from'react-dom/server';import {ToolFinder,TeachingPath,PageContinuation} from './src/FacultyTools.jsx';import MeetingPresenter from './src/MeetingPresenter.jsx';export default {finder:renderToStaticMarkup(React.createElement(ToolFinder)),path:renderToStaticMarkup(React.createElement(TeachingPath,{path:'myp',setPath:()=>{}})),next:renderToStaticMarkup(React.createElement(PageContinuation,{route:'core'})),tuesday:renderToStaticMarkup(React.createElement(MeetingPresenter,{meetingId:'nov10-pd'}))};",resolveDir:process.cwd()},bundle:true,platform:'node',format:'cjs',outfile,loader:{'.css':'empty'},logLevel:'silent'});
+ const html=createRequire(import.meta.url)(outfile).default;
+ assert(html.finder.includes('<dialog'));assert(html.finder.includes('Search teaching tools'));assert(html.finder.includes('Close tool finder'));assert(html.finder.includes('aria-labelledby="finder-title"'));
+ assert(html.path.includes('aria-pressed="true">MYP'));assert(html.path.includes('does not hide other tools'));assert(html.next.includes('Explore TOK lenses'));
+ assert(html.tuesday.includes('PRIVATE · SCHOOL SIGN-IN'));assert(html.tuesday.includes('1:00–2:00'));assert(html.tuesday.includes('3:10–3:30'));assert(!html.tuesday.includes('<iframe'));assert(html.tuesday.includes('Explore resources for'));assert(html.tuesday.includes('separate tab'));assert(html.tuesday.includes('Presentation sections'));assert(html.tuesday.includes('8:30'));assert(html.tuesday.includes('H104'));assert(html.tuesday.includes('Previous activity'));assert(html.tuesday.includes('Next activity'));assert(html.tuesday.includes('sign-in has not been verified'));assert(html.tuesday.includes('target="avhs-tuesday-workspace"'));assert(!html.tuesday.includes('H103'));
+}finally{rmSync(temp,{recursive:true,force:true})}
+console.log('PASS Faculty Commons search, pathway destinations, return routes, Tuesday arrival, 30-minute lab, semantics and motion safeguards.');

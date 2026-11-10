@@ -79,3 +79,11 @@ The updated Monday working outline keeps the first 30 minutes, the 8:40 recruitm
 ## Academy identity and teaching connections
 
 The provided GLA seal retains its original colors and artwork. An original React wireframe globe responds to three teaching-lens buttons on Home, revealing a classroom prompt and a direct link to the existing ATL, TOK or MYP Design diagram. It is a visual connection motif, not a geographic data display. No automatic rotation, new external requests, persistence or new programme requirements. Keyboard and touch use the same buttons; Calm view and reduced-motion settings remove transitions. The existing layout, palette, meeting content and tools are preserved.
+
+## Faculty Commons · November 10 update
+
+Home opens the November 10 collaboration at 8:30 a.m. in H104. The teacher-facing name is GLA Faculty Commons. A local tool finder searches the site's destinations; MYP, DP and cross-programme pathways stay in tab memory without profiles or browser storage. Each teaching page includes relevant onward links. Larger body text, clearer card edges and page accents preserve the black, Vegas gold and blue identity. Motion preferences and Calm view still apply.
+
+The Monday and Tuesday presenter views offer expandable resources for the active topic. Internal resources open in a reusable resource tab so the presentation remains on its selected activity; public references open in separate tabs. Tuesday has direct jumps to the day agenda, teaching workshop and tool shelf. The November 10 attendance link remains unverified, and no substitute form is implied. Public practice uses fictional data only. Actual school data and the private packet are not reproduced. One explicitly requested dashboard link opens only in Google Sheets under its existing owner-only school-account access; no staff access is granted by the public site.
+
+The technology practice block is 30 minutes, 2:10–2:40 p.m. on the working November 10 plan. The reusable six-activity teaching workshop is separate from the day timetable. Existing source dates, local-confirmation cautions and external resource access warnings remain visible.
