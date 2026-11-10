@@ -42,7 +42,7 @@ export const plcMeetings=[
     ],
     [
       "8:45–9:10",
-      "Inquiry model and AI critique"
+      "Student-perspective inquiry and AI critique"
     ],
     [
       "9:10–9:35",
