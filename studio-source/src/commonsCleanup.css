@@ -5,3 +5,9 @@
 @media(max-width:480px){.commons-hero{align-items:flex-start}.commons-home .commons-hero img{width:56px;height:56px}.commons-home .commons-hero h1{font-size:37px}.commons-home .commons-hero p:not(.eyebrow){margin-right:-75px}.commons-home .commons-hero .eyebrow{max-width:215px}}
 @media(prefers-reduced-motion:reduce){.commons-primary>a{transition:none}.commons-primary>a:hover{transform:none}}html[data-motion=off] .commons-primary>a{transition:none}html[data-motion=off] .commons-primary>a:hover{transform:none}
 @media print{.commons-primary,.commons-secondary,.history-steps,.commons-download-help{grid-template-columns:1fr}.history-tabs{display:none}.commons-primary>a{color:#000!important;background:none!important;box-shadow:none}.commons-primary p,.commons-primary span{color:#000!important}}
+/* Override the legacy global white disclosure surface in the dark sidebar. */
+.sidebar details.commons-nav-group{background:#151b18;border:0;border-bottom:1px solid #586149;border-radius:0;box-shadow:none;color:#eee6cf}
+.sidebar details.commons-nav-group>summary{background:transparent;color:#eee6cf}
+.sidebar details.commons-nav-group a{color:#c9d1c2}
+.sidebar details.commons-nav-group a[aria-current=page]{color:#edd58e;background:#ddc17c14}
+.sidebar details.commons-nav-group a:hover{color:#f3e6bc;background:#32402c}

@@ -1,0 +1,6 @@
+/* Override the legacy global white disclosure surface in the dark sidebar. */
+.sidebar details.commons-nav-group{background:#151b18;border:0;border-bottom:1px solid #586149;border-radius:0;box-shadow:none;color:#eee6cf}
+.sidebar details.commons-nav-group>summary{background:transparent;color:#eee6cf}
+.sidebar details.commons-nav-group a{color:#c9d1c2}
+.sidebar details.commons-nav-group a[aria-current=page]{color:#edd58e;background:#ddc17c14}
+.sidebar details.commons-nav-group a:hover{color:#f3e6bc;background:#32402c}

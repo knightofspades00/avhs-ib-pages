@@ -13,6 +13,7 @@ assert.equal(historyCourses['2028'].assessment[2][1],'Regional study · 2 hours'
 for(const year of ['2027','2028']){const text=historyDraftText(year,'Keep this exact draft: <&>');assert(text.includes('Keep this exact draft: <&>'));assert(text.includes(year+' · HL'));assert(text.includes(historyCourses[year].source));}
 assert.deepEqual(breadcrumbsFor('history/notes').map(x=>x.label),['Home','History guide','My next step']);
 assert(findTools('history').some(x=>x[0]==='#history'));
+const css=readFileSync('src/commonsCleanup.css','utf8');assert(css.includes('.sidebar details.commons-nav-group{background:#151b18'));
 const main=readFileSync('src/main.jsx','utf8');assert(main.includes('historyNotes,...Object.values(notes)'));assert(main.includes('summary'));assert(main.includes('notes={historyNotes}'));assert(!/localStorage|sessionStorage|fetch\(/.test(readFileSync('src/HistoryGuide.jsx','utf8')));
 const temp=mkdtempSync(join(tmpdir(),'commons-cleanup-'));
 try{
