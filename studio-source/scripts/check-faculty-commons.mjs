@@ -14,7 +14,7 @@ for(const programme of ['DP','MYP']){assert.equal(subjectCurriculumLinks[program
 const known=new Set([...Object.keys(routeNames),'workshop','recruitment','present']);
 for(const row of [...toolDirectory,...Object.values(teachingPaths).flatMap(x=>x.links),...Object.values(pageContinuations).flatMap(x=>x.slice(1))])assert(known.has(row[0].slice(1).split('/')[0]),row[0]);
 assert.equal(new Set(toolDirectory.map(x=>x[0])).size,toolDirectory.length);
-assert.equal(findTools('pdf').length,1);assert.equal(findTools('unmatched-not-a-tool').length,0);assert(findTools('ATL').some(x=>x[0]==='#maps/atl'));assert(findTools('today').some(x=>x[0]==='#present/nov10-pd'));
+assert.equal(findTools('pdf').length,1);assert.equal(findTools('unmatched-not-a-tool').length,0);assert(findTools('ATL').some(x=>x[0]==='#maps/atl'));assert(findTools('november 10').some(x=>x[0]==='#present/nov10-pd'));
 assert.equal(Object.keys(teachingPaths).length,3);
 const meeting=plcMeetings.find(m=>m.id==='nov10-pd');assert.equal(meeting.location,'H104');assert(meeting.time.includes('8:30'));assert(!JSON.stringify(meeting).includes('8:00'));
 assert.equal(meetingLaunchLabel(new Date('2026-11-10T16:00:00Z'),'nov10-pd'),"Today's collaboration");

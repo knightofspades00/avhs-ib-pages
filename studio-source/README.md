@@ -87,3 +87,14 @@ Home opens the November 10 collaboration at 8:30 a.m. in H104. The teacher-facin
 The Monday and Tuesday presenter views offer expandable resources for the active topic. Internal resources open in a reusable resource tab so the presentation remains on its selected activity; public references open in separate tabs. Tuesday has direct jumps to the day agenda, programme anchors, nine subject/context AI examples and an 11-field design organizer. Phase buttons and previous/next controls preserve the active block. Lunch and breaks have no resource shelf. The organizer stays in App memory across site navigation, is never sent to a server and can be downloaded as a local text file. The November 10 attendance link remains unverified, and no substitute form is implied. Public practice uses fictional data only. Actual school data and the private packet are not reproduced. One explicitly requested dashboard link opens only in Google Sheets under its existing owner-only school-account access; no staff access is granted by the public site.
 
 The technology practice block is 30 minutes, 2:10–2:40 p.m. on the working November 10 plan. The reusable six-activity teaching workshop is separate from the day timetable. Existing source dates, local-confirmation cautions and external resource access warnings remain visible.
+
+
+## Faculty Commons · November 13 cleanup
+
+The reviewed prototype is integrated into the React app. Home now starts with a subject guide, lesson planning and dates/submissions; November 9 and 10 are retained as past-session resources. Four expandable navigation groups preserve every existing destination, tool finder, mobile focus trap and direct link. The original teaching globe remains available in a Home disclosure.
+
+The History of the Americas HL pilot at `#history` has bookmarkable Teach, Assess, Prepare, Resources and My next step sections. Its assessment-cohort control separates last assessment 2027 from first assessment 2028 using official public IB subject briefs checked November 13. School course choices, levels, hand-in dates and responsibilities remain unverified. This is an original planning guide, not a replacement for current protected guides.
+
+History notes and cohort selection survive site navigation in App memory. Reload/close warnings include those notes. No browser storage, analytics, account saving, new network service or sharing changes were introduced. Draft downloads include the selected cohort and entered text; blank-PDF labels now explicitly describe an empty template. All existing privacy cautions and resource permissions remain unchanged.
+
+`npm run check` includes the original suites and the cleanup suite, which renders all ten History cohort/section combinations, checks export text and escaping, route breadcrumbs, Home entry points and the absence of added storage/network code.

@@ -1,6 +1,7 @@
 // Original teaching pathways. No personal profile, analytics or account integration.
 export const toolDirectory=[
- ['#present/nov10-pd','Tuesday collaboration day','Present the November 10 agenda and teaching activities.','today meeting h104 8:30 november 10'],
+ ['#history','History of the Americas guide','Plan DP History HL for the 2027 or 2028 assessment cohort.','subject course guide teach assess prepare investigation'],
+ ['#present/nov10-pd','Tuesday collaboration day','Present the November 10 agenda and teaching activities.','past meeting h104 8:30 november 10'],
  ['#new','New to IB','Plain-language programme introductions and first teaching moves.','beginner glossary start induction'],
  ['#maps/atl','ATL skills map','Choose a skill and make its practice visible.','approaches learning communication research thinking social self management'],
  ['#maps/tok','TOK connections','Compare how disciplines build and test knowledge.','theory knowledge perspectives evidence'],
@@ -44,5 +45,6 @@ export const pageContinuations={
  downloads:['Save and reopen the downloaded file to check that your entries remain.',['#myp','Use the online unit organizer'],['#examples','Find a lesson starting point']],
  pd:['Leave with a next step, an owner and a way to see what changed.',['#workshop/start','Open the teaching workshop'],['#downloads/plc','Get a meeting organizer']],
  recruitment:['Keep the group’s draft and check the accuracy of each programme claim.',['#subjects','Review subject connections'],['#new','Review programme basics']],
- about:['Start with the work you need to do today.',['#pd/nov10-pd','Open Tuesday’s session'],['#examples','Plan a lesson']]
+ history:['Choose a useful next step and keep a copy of your planning note.',['#history/notes','Keep a planning note'],['#subjects','Browse subject groups']],
+ about:['Start with the work you need to do today.',['#history','Open the History guide'],['#examples','Plan a lesson']]
 };

@@ -42,7 +42,8 @@ try {
  assert(!/canva\.com|canva\.link/.test(html));
 }finally{rmSync(presenterTemp,{recursive:true,force:true});}
 const mainSource=readFileSync('src/main.jsx','utf8');
-assert(mainSource.includes("route==='present'&&['nov09-mou','nov10-pd'].includes(part)"));assert(mainSource.includes('<MeetingLaunch/>'));
+assert(mainSource.includes("route==='present'&&['nov09-mou','nov10-pd'].includes(part)"));assert(readFileSync('src/CommonsHome.jsx','utf8').includes('#pd/nov09-mou'));
+assert(readFileSync('src/CommonsHome.jsx','utf8').includes('Past session'));
 assert(!mainSource.includes('requestFullscreen'));
 console.log('PASS date-aware Home label, bookmarkable presenter route, original schedule reuse, sequential controls, exit and supporting form targets.');
 
